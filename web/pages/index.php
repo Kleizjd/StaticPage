@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
-    <link rel="stylesheet" href="jquery/jquery-3.5.0.min.js">
-    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../../vendor/jquery-3.5.0.min.js">
+    <link rel="stylesheet" href="../../vendor/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../vendor/css/style.css">
     <style>
         /* #cuerpo {
             background: black;
@@ -156,9 +156,15 @@
             </div>
 
         </div>
-        
+        <!-- <div class="row">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/DGRz2BJQRXU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div> -->
+        <div class="row">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/DGRz2BJQRXU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
 
     </div>
+    
     <!-- Contact -->
 	<div class="contact" id="contact">
 		<div class="container">
@@ -169,18 +175,20 @@
 			<form class="contact_form">
 
 				<div class="message">
-					<div class="col-md-6 col-sm-6 grid_6 c1">
-						<input type="text" class="text" placeholder="Name" required="" >
-						<input type="text" class="text" placeholder="Email" required="" >
-						<input type="text" class="text" placeholder="Celular" required="" >
-					</div>
+					<div class="row">
+                        <div class="col-md-6 col-sm-6 grid_6 c1">
+                            <input type="text" class="text" placeholder="Name" required="" >
+                            <input type="text" class="text" placeholder="Email" required="" >
+                            <input type="text" class="text" placeholder="Celular" required="" >
+                        </div>
 
-					<div class="col-md-6 col-sm-6 grid_6 c1">
-						<textarea placeholder="Mensaje" required=""></textarea>
-					</div>
-					<div class="clearfix"></div>
+                        <div class="col-md-6 col-sm-6 grid_6 c1">
+                            <textarea placeholder="Mensaje" required=""></textarea>
+                        </div>
+                        <div class="clearfix"></div>
 
-					<input type="submit" class="more_btn" value="Envia tu Opinion">
+                        <input type="submit" class="more_btn" value="Envia tu Opinion">
+                    </div>
 				</div>
 			</form>
 
