@@ -1,0 +1,170 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="jquery/jquery-3.5.0.min.js">
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <style>
+        #cuerpo {
+            background: black;
+    
+        }
+    
+        #mision {
+            background: #d181f3;
+        }
+    
+        #vision {
+            background: #e3b8fe;
+    
+        }
+    
+        #historia {
+            background: #d181f3;
+    
+        }
+    
+        #targeta {
+            background: #e3b8fe;
+    
+        }
+    
+        #tit_ingre {
+    
+            background: #d181f3;
+        }
+    
+        #agregar {
+            background: #d181f3;
+            border-bottom: black;
+            font-style: black;
+        }
+    </style>
+</head>
+
+
+<body id="cuerpo">
+    <!-- Header -->
+	<div class="header">
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">Navbar</a>
+          
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+              <ul class="navbar-nav ml-auto mt-2 mt-lg-0 ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+              </ul>
+              <!-- <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form> -->
+            </div>
+          </nav>
+	
+		<!-- //Navbar -->
+
+	
+
+	</div>
+  
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4 mx-md-auto">
+                <div class="login-card card">
+                    <form action="" method="POST">
+                        <div id="tit_ingre" class="card-header">
+                            <div class="card-title text-center"><b>Ingrese Materias</b></div>
+                        </div>
+                        <div id="targeta" class="card-body">
+                            <div class="form-group">
+                                <!-- inicio fila -->
+                                <div class="row">
+                                    <div class="col-4">
+                                        <label for="materia"><b>Materia</b></label>
+                                    </div>
+                                    <div class="col-6">
+
+                                        <input type="text" id="materia" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 text-center p-5">
+                                        <button id="agregar" type="reset" value="Agregar"
+                                            class="btn btn-primary">Agrear</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <br></br>
+    </div>
+    <div class="container">
+        <div class="row">
+
+            <div id="mision" class="col-4  text-center p-5">
+                <label for="mision"><b><u>Mision de Apple</u></b></label>
+                <p>Apple diseña Mac, las mejores computadoras personales del mundo, junto con OS X, iLife, iWork y
+                    software profesional. Apple lidera la revolución de la música digital con sus iPods y la tienda en
+                    línea de iTunes. Apple ha reinventado el teléfono móvil con su revolucionaria tienda de aplicaciones
+                    y iPhone, y está definiendo el futuro de los medios móviles y los dispositivos informáticos con
+                    iPad.
+
+                    Esta compañía centra sus acciones en el usuario, ya que sabe que no hay crecimiento posible sin un
+                    servicio y usabilidad excelentes, a la vez que se ve a sí misma como un líder tecnológico.
+
+                    Otro de los enfoques de esta misión es llevar productos confiables, revolucionarios y de calidad
+                    alta, lo que la posiciona como una marca de gran atracción. Así, no tienen usuarios, sino seguidores
+                    que refuerzan el proceso publicitario.</p>
+
+
+            </div>
+
+            <div id="vision" class="col-4  text-center p-5">
+                <label for="Vision"><b><u>Vision de Apple</u></b></label>
+                <p> Mejorar la calidad de vida de nuestros clientes, a través de tres pilares: profesionalismo,
+                    tecnología y trayectoria, para lograr ser reconocidos como la empresa líder en tecnologías de
+                    información, comunicación y entretenimiento.</p>
+
+            </div>
+
+            <div id="historia" class="col-4 text-center p-5">
+
+                <label for="historia"><b><u>Historia Apple</u></b></label>
+                <p> Apple Inc. es una empresa estadounidense que diseña y produce equipos electrónicos, software y
+                    servicios en línea. Tiene su sede central en el Apple Park, en Cupertino (California, Estados
+                    Unidos) y la sede europea en la ciudad de Cork (Irlanda).3​Sus productos de hardware incluyen el
+                    teléfono inteligente iPhone, la tableta iPad, el ordenador personal Mac, el reproductor de medios
+                    portátil iPod, el reloj inteligente Apple Watch y el reproductor de medios digitales Apple TV. Entre
+                    el software de Apple se encuentran los sistemas operativos iOS, macOS, watchOS y tvOS, el explorador
+                    de contenido multimedia iTunes, la suite iWork (software de productividad), Final Cut Pro X (una
+                    suite de edición de vídeo profesional), Logic Pro (software para edición de audio en pistas de
+                    audio), Xsan (software para el intercambio de datos entre servidores) y el navegador web Safari.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
