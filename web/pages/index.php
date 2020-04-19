@@ -72,12 +72,7 @@
 		<!-- //Navbar -->
 	</div>
   
-<<<<<<< HEAD
     <div class="container" id="about">
-=======
-    
-    <div class="container">
->>>>>>> dbe5cf354a6c02f3c0ddc4febaafc170265d6140
         <div class="row">
 
             <div id="mision" class="col-4 text-center p-5">
@@ -121,27 +116,16 @@
                 </p>
             </div>
         </div>
-<<<<<<< HEAD
-    </div>
-    <div class="container">
-         <div class="row">
+        <div class="row">
              <div class="col-sm-12 my-auto">
                  <div class="card-block" align="center">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/DGRz2BJQRXU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/6vqqscfR95Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                      
                  </div>
              </div>
         </div>
-=======
-        <!-- <div class="row">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/DGRz2BJQRXU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div> -->
-       <div class="row">
-       <iframe width="560" height="315" src="https://www.youtube.com/embed/6vqqscfR95Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-       </div>
-
->>>>>>> dbe5cf354a6c02f3c0ddc4febaafc170265d6140
     </div>
+    
     <!-- Contact -->
 	<div class="contact" id="contact">
 		<div class="container">
@@ -155,11 +139,7 @@
 					<div class="row">
                         <div class="col-md-6 col-sm-6 grid_6 c1">
                             <input type="text" class="text" placeholder="Nombre" required="" >
-<<<<<<< HEAD
                             <input type="text" class="text" placeholder="Email" required="" >
-=======
-                            <input type="text" class="text" placeholder="Correo" required="" >
->>>>>>> dbe5cf354a6c02f3c0ddc4febaafc170265d6140
                             <input type="text" class="text" placeholder="Celular" required="" >
                         </div>
 
