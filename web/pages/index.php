@@ -74,41 +74,7 @@
 		<!-- //Navbar -->
 	</div>
   
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-4 mx-md-auto">
-                <div class="login-card card">
-                    <form action="" method="POST">
-                        <div id="tit_ingre" class="card-header">
-                            <div class="card-title text-center"><b>Ingrese Materias</b></div>
-                        </div>
-                        <div id="targeta" class="card-body">
-                            <div class="form-group">
-                                <!-- inicio fila -->
-                                <div class="row">
-                                    <div class="col-4">
-                                        <label for="materia"><b>Materia</b></label>
-                                    </div>
-                                    <div class="col-6">
-
-                                        <input type="text" id="materia" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 text-center p-5">
-                                        <button id="agregar" type="reset" value="Agregar"
-                                            class="btn btn-primary">Agrear</button>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <br></br>
-    </div>
+    
     <div class="container">
         <div class="row">
 
@@ -159,9 +125,9 @@
         <!-- <div class="row">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/DGRz2BJQRXU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div> -->
-        <div class="row">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/DGRz2BJQRXU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+       <div class="row">
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/6vqqscfR95Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       </div>
 
     </div>
     
@@ -177,8 +143,8 @@
 				<div class="message">
 					<div class="row">
                         <div class="col-md-6 col-sm-6 grid_6 c1">
-                            <input type="text" class="text" placeholder="Name" required="" >
-                            <input type="text" class="text" placeholder="Email" required="" >
+                            <input type="text" class="text" placeholder="Nombre" required="" >
+                            <input type="text" class="text" placeholder="Correo" required="" >
                             <input type="text" class="text" placeholder="Celular" required="" >
                         </div>
 
