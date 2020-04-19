@@ -76,11 +76,12 @@ a:focus, a:hover {
 
 /*-- Navbar --*/
 .navbar {
-	margin-bottom: 0;
-	position: absolute;
+	/* margin-bottom: 0; */
+	margin-bottom: 55px;
+	/* position: absolute; */
 	z-index: 99999;
 	background-color: rgba(0, 0, 0, 0.47);
-	border: none;
+	/* border: none; */
 	border-bottom: 1px solid #BBB;
 	border-radius: 0;
 	width: 100%;
@@ -88,8 +89,8 @@ a:focus, a:hover {
 }
 
 a.navbar-brand {
-	font-family: 'Racing Sans One', cursive;
-	font-size: 50px;
+	/* font-family: 'Racing Sans One', cursive; */
+	font-size: 30px;
 }
 
 .navbar-default .navbar-brand {
@@ -115,7 +116,7 @@ a.navbar-brand {
 /*-- Link-Hover-Effect --*/
 .hover-effect a {
 	padding: 10px;
-	color: #237546;
+	/* color: #237546; */
 	font-weight: 700;
 	text-shadow: none;
 	-webkit-transition: color 0.3s;
