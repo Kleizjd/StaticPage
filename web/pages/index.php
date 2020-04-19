@@ -61,9 +61,7 @@
               <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                 <li class="hover-effect"><a href="#">Home</a></li>
                 <li class="hover-effect"><a href="#about">Acerca</a></li>
-                <li class="hover-effect"><a href="#team">Equipo</a></li>
-                <li class="hover-effect"><a href="#download">Download</a></li>
-                <li class="hover-effect"><a href="#contact">Contact</a></li>
+                <li class="hover-effect"><a href="#contact">Contacto</a></li>
             </ul>
               <!-- <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -74,45 +72,10 @@
 		<!-- //Navbar -->
 	</div>
   
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-4 mx-md-auto">
-                <div class="login-card card">
-                    <form action="" method="POST">
-                        <div id="tit_ingre" class="card-header">
-                            <div class="card-title text-center"><b>Ingrese Materias</b></div>
-                        </div>
-                        <div id="targeta" class="card-body">
-                            <div class="form-group">
-                                <!-- inicio fila -->
-                                <div class="row">
-                                    <div class="col-4">
-                                        <label for="materia"><b>Materia</b></label>
-                                    </div>
-                                    <div class="col-6">
-
-                                        <input type="text" id="materia" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 text-center p-5">
-                                        <button id="agregar" type="reset" value="Agregar"
-                                            class="btn btn-primary">Agrear</button>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <br></br>
-    </div>
-    <div class="container">
+    <div class="container" id="about">
         <div class="row">
 
-            <div id="mision" class="col-4  text-center p-5">
+            <div id="mision" class="col-4 text-center p-5">
                 <label for="mision"><b><u>Mision de Apple</u></b></label>
                 <p>Apple diseña Mac, las mejores computadoras personales del mundo, junto con OS X, iLife, iWork y
                     software profesional. Apple lidera la revolución de la música digital con sus iPods y la tienda en
@@ -150,21 +113,20 @@
                     de contenido multimedia iTunes, la suite iWork (software de productividad), Final Cut Pro X (una
                     suite de edición de vídeo profesional), Logic Pro (software para edición de audio en pistas de
                     audio), Xsan (software para el intercambio de datos entre servidores) y el navegador web Safari.
-                    
                 </p>
-
             </div>
-
         </div>
-        <!-- <div class="row">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/DGRz2BJQRXU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div> -->
-        <div class="row">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/DGRz2BJQRXU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-
     </div>
-    
+    <div class="container">
+         <div class="row">
+             <div class="col-sm-12 my-auto">
+                 <div class="card-block" align="center">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/DGRz2BJQRXU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                     
+                 </div>
+             </div>
+        </div>
+    </div>
     <!-- Contact -->
 	<div class="contact" id="contact">
 		<div class="container">
@@ -177,7 +139,7 @@
 				<div class="message">
 					<div class="row">
                         <div class="col-md-6 col-sm-6 grid_6 c1">
-                            <input type="text" class="text" placeholder="Name" required="" >
+                            <input type="text" class="text" placeholder="Nombre" required="" >
                             <input type="text" class="text" placeholder="Email" required="" >
                             <input type="text" class="text" placeholder="Celular" required="" >
                         </div>
