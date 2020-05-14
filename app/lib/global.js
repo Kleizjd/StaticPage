@@ -1,6 +1,6 @@
 
 // INCLUIR SCRIPTS DE LAS VISTAS
-$.getScript("../../views/open-views.js");
+$.getScript("../../routes/web.js");
 
 
 // LLAMAR LA VISTA QUE SE CARGARA CON LOS DATOS 
