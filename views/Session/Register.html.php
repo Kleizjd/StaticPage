@@ -22,7 +22,7 @@
                     </div>
                     
                     <div class="card-body">
-                        <form id="frm_register" action="" method="POST" autocomplete="off">
+                        <form id="form_register" action="" method="POST" autocomplete="off">
                             <fieldset>
                                 <div class="form-group">
                                     <div class="form-row">
@@ -45,9 +45,7 @@
                                         <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="required">
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Usuario" name="user" autofocus>
-                                </div>
+                               
                                 <div class="form-group">
                                     <input type="password" class="form-control" placeholder="contraseña" name="password">
                                 </div>
@@ -55,7 +53,7 @@
                                     <input type="password" class="form-control" placeholder="verificar contraseña" name="verifyPassword">
                                 </div>
                                 <!-- <input type="submit" class="btn btn-lg btn-primary btn-block" value="Registrar"> -->
-                                <input type="button" class="btn btn-lg btn-primary btn-block" value="Registrar" onclick="$(location).attr('href','../../web/pages/index.html');">
+                                <input type="button" class="btn btn-lg btn-primary btn-block" value="Registrar" onclick="$(location).attr('href','../../web/pages/index.html.php');">
 
                             </fieldset>
 
@@ -69,6 +67,38 @@
 </body>
 <script src="../../vendor/jquery/jquery.min.js"></script>
 <!-- <script src="../../vendor/sweetalert/js/sweetalert2.min.js"></script> -->
-<!-- <script src="../../public/js/login.js"></script> -->
 
 </html>
+<script>
+    $(document).ready(function(){
+        $(document).on("submit", "#form_register", function(event){
+            event.preventDefault();
+
+            var formData = FormData (event.target);
+            formData.append("module", "Session");
+            formData.append("controller", "Session");
+            formData.append("nameFunction", "registerUser");
+            
+             $.ajax({
+               url: 'app/lib/ajax.php',
+               method: $(this).attr('method'),
+               dataType: 'JSON',
+               data: formData ,
+               cache: false,
+               processData: false,
+               contentType: false
+            }).done((res) => {
+            // TODO: add the fields
+                if(res.typeAnswer == "success"){
+                    swal({
+                       title: 'Registro Exitoso',
+                       type: ' success'
+                    })
+                }
+            })
+            
+           
+
+        });
+    });
+</script>
