@@ -28,13 +28,13 @@
                                     <div class="form-row">
                                         <div class="col-md-6">
                                             <div class="form-label-group">
-                                                <input type="text" id="firstName" class="form-control" placeholder="Nombres" required="required" autofocus="autofocus">
+                                                <input type="text" id="firstName" name="firstName" class="form-control" placeholder="Nombres" required="required" autofocus="autofocus">
                                                 <!-- <label for="firstName">Primer name</label> -->
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-label-group">
-                                                <input type="text" id="lastName" class="form-control" placeholder="Apellidos" required="required">
+                                                <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Apellidos" required="required">
                                                 <!-- <label for="lastName">Last name</label> -->
                                             </div>
                                         </div>

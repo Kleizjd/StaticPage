@@ -12,10 +12,10 @@ class Session extends connection {
     public function createSession(){
         extract($_POST);
         $answer = array();
-        $sqlUser = "SELECT * FROM usuario WHERE correo = '$correo' AND contrasena = '$contrasena'";
+        $sqlUser = "SELECT * FROM usuario WHERE correo = '$user' AND contrasena = '$password'";
         $sql = $this->consult($sqlUser);
         if($sql != null){
-
+            
             $answer['typeAnswer'] = "success";
         }
         echo json_encode($answer);
@@ -31,10 +31,12 @@ class Session extends connection {
        $answer = array();
        
        if($password == $passwordVerify){
-            $sqlRegister ="INSERT INTO usuario (id_persona,correo, contrasena, id_rol) VALUES ( null,'$inputEmail', '$password' ,  1  )";
-            // echo "INSERT INTO usuario (correo, contrasena, id_rol) VALUES ('$inputEmail', '$password' ,  1  )";
+            $sqlRegister ="INSERT INTO usuario (id_persona,correo, contrasena, id_rol, nombres, apellidos) VALUES ( null,'$inputEmail', '$password' ,  1, '$firstName', '$lastName' )";
             $sql = $this->execute($sqlRegister);
-            $answer['typeAnswer'] = "success";
+            if($sql != null){
+             $answer['typeAnswer'] = "success";
+
+            }
        }
        echo json_encode($answer);
     }

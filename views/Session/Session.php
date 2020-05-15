@@ -36,8 +36,8 @@
                                         <i class="fas fa-eye"></i>
                                     </button>
                                 </div>
-                                <!-- <input type="submit" class="btn btn-lg btn-primary btn-block" value="Ingresar" > -->
-                                <input type="button" class="btn btn-lg btn-primary btn-block" value="Ingresar" onclick="$(location).attr('href','../../web/pages/');">
+                                <input type="submit" class="btn btn-lg btn-primary btn-block" value="Ingresar" >
+                                <!-- <input type="button" class="btn btn-lg btn-primary btn-block" value="Ingresar" onclick="$(location).attr('href','../../web/pages/');"> -->
 
                             </fieldset>
                         </form>
@@ -77,10 +77,10 @@ $(document).ready(function () {
         $(document).on("submit", "#form_session", function(event){
             event.preventDefault();
 
-            var formData = FormData (event.target);
+            var formData = new FormData (event.target);
             formData.append("module", "Session");
             formData.append("controller", "Session");
-            formData.append("nameFunction", "createUser");
+            formData.append("nameFunction", "createSession");
             
              $.ajax({
                url: 'app/lib/ajax.php',
@@ -92,6 +92,7 @@ $(document).ready(function () {
                contentType: false
             }).done((res) => {
             // TODO: add the fields
+                location.href = "web/pages";
                 if(res.typeAnswer == "success"){
                     swal({
                        title: 'Registro Exitoso',
