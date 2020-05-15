@@ -42,15 +42,15 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="form-label-group">
-                                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="required">
+                                        <input type="email" class="form-control" placeholder="Email address" name="inputEmail" id="inputEmail" required="required">
                                     </div>
                                 </div>
                                
                                 <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="contraseña" name="password">
+                                    <input type="password" class="form-control" placeholder="contraseña" name="password" id="password">
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="verificar contraseña" name="verifyPassword">
+                                    <input type="password" class="form-control" placeholder="verificar contraseña" name="passwordVerify" id="passwordVerify">
                                 </div>
                                 <input type="submit" class="btn btn-lg btn-primary btn-block" value="Registrar">
                                 <!-- <input type="button" class="btn btn-lg btn-primary btn-block" value="Registrar" onclick="$(location).attr('href','../../web/pages/index.html.php');"> -->
