@@ -33,3 +33,4 @@ class Session extends connection {
         @session_unset();
         @session_destroy();
     }
+}

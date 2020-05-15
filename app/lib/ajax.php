@@ -6,11 +6,11 @@ extract($_POST);
 if (!empty($_POST)) {
      
     if (isset($module) && isset($controller) && isset($nameFunction)) {
-        if (is_dir("../../app/controller/" . $module)) {
+        if (is_dir("../../app/Controllers/" . $module)) {
             // echo "<script> alert('servira :'+'../../app/controller/" . $modulo . "/" . $controlador . ".controller.php'); </script>";
 
-            if (file_exists("../../app/controller/" . $module . "/" . $controller . ".controller.php")) {
-                include_once "../../app/controller/" . $module . "/" . $controller . ".controller.php";
+            if (file_exists("../../app/Controllers/" . $module . "/" . $controller . ".controller.php")) {
+                include_once "../../app/Controllers/" . $module . "/" . $controller . ".controller.php";
 
                 $className = $controller;
                 // echo "<script> alert('nombre clase : " . $nombreClase."'); </script>";
