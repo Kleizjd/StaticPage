@@ -10,41 +10,41 @@
     <link rel="stylesheet" href="../../vendor/css/video-responsive.css">
 </head>
 <style>
-        /* #cuerpo {
+    /* #cuerpo {
             background: black;
     
         }
      */
-        #mision {
-            background: #d181f3;
-        }
-    
-        #vision {
-            background: #e3b8fe;
-    
-        }
-    
-        #historia {
-            background: #d181f3;
-    
-        }
-    
-        #targeta {
-            background: #e3b8fe;
-    
-        }
-    
-        #tit_ingre {
-    
-            background: #d181f3;
-        }
-    
-        #agregar {
-            background: #d181f3;
-            border-bottom: black;
-            font-style: black;
-        }
-    </style>
+    #mision {
+        background: #d181f3;
+    }
+
+    #vision {
+        background: #e3b8fe;
+
+    }
+
+    #historia {
+        background: #d181f3;
+
+    }
+
+    #targeta {
+        background: #e3b8fe;
+
+    }
+
+    #tit_ingre {
+
+        background: #d181f3;
+    }
+
+    #agregar {
+        background: #d181f3;
+        border-bottom: black;
+        font-style: black;
+    }
+</style>
 
 <body class="bg-dark">
     <!-- Header -->
@@ -52,8 +52,7 @@
         <!-- Navbar -->
         <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
         <nav class="navbar navbar-expand-lg navbar-dark ">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="#">PsicoApp/Web </a>
@@ -77,6 +76,7 @@
         <div id="description" class="row">
             <div class="descripcion col-sm-12 text-center  p-5" style="background-color: #dcb8dc; font-size: large;">
                 <h1>DESCRIPCION</h1>
+                <br>
                 <b>" Confía en ti mismo, de lo contrario, será difícil que los demás confíen en ti "</b>
 
 
@@ -86,14 +86,16 @@
                     Se debe aprender a ejercer control sobre las deciciones y acciones de tu dia a dia, ya que
                     estas
                     formaran tus habitos.
-                    <br>
-                    <b>CONSEJO:</b>
-                    Practica el habito del Auto-control, ya sea en los alimentos que consumes, la
+                </p>
+                <br>
+                <b>CONSEJO:</b>
+                <p>Practica el habito del Auto-control, ya sea en los alimentos que consumes, la
                     administracion de
                     tus recursos (tiempo y dinero), el cuidado del medio ambiente y para evitar cualquier
                     adiccion.
 
                 </p>
+
 
 
 
@@ -104,43 +106,55 @@
     </div>
     <div id="about" class="row">
 
-<div id="mision" class="col-sm-4 text-center p-5">
-    <label for="mision"><b><u>¿Como Se Trabaja O Se Sube El Autoestima?</u></b></label>
-    <p>Personalmente la mejor manera de trabajar el autoestima es a travez de lo cognitivo (nuestra mente).
-        Cuando comenzamos a cambiar nuestros pensamientos sobre nosotros mismos, generamos tambien un cambio
-        emocional. Toma conciencia de tu charla interna, ¿que tan duro eres contigo mismo? Cuando cambiamos
-        nuestro dialogo interior comenzamos a cambiar nuestra autoestima.</p>
-</div>
+        <div id="mision" class="col-sm-4 text-center p-5">
+            <label for="mision"><b><u>¿Como Se Trabaja O Se Sube El Autoestima?</u></b></label>
+            <p>Personalmente la mejor manera de trabajar el autoestima es a travez de lo cognitivo (nuestra mente).
+                Cuando comenzamos a cambiar nuestros pensamientos sobre nosotros mismos, generamos tambien un cambio
+                emocional. Toma conciencia de tu charla interna, ¿que tan duro eres contigo mismo? Cuando cambiamos
+                nuestro dialogo interior comenzamos a cambiar nuestra autoestima.</p>
+                <br>
+                <p>
+                El dominio de nuestros pensamientos comienza con pequeños cambios de actitud, de habitos, de costumbres,
+                reeplazar ese chip de creencias arraigadas, para estrenar uno nuevo, <b>EL DE SU MEJOR VERSION</b>; Comenzar
+                a combatir esa mentalidad no es un trabajo sencillo, pero cada pequeña victoria, es decir, cada pequeño cambios
+                o mejoria, es un paso a su evolucion, a alcanzar su <b>NUEVO YO</b>.
 
-<div id="vision" class="col-sm-4  text-center p-5">
-    <label for="Vision"><b><u>No Vayas Por Ahi Mendigando Amor</u></b></label>
-    <br>
-    <p> Si vas por el mundo mendigando amor probablemente te encontraras con las migajas, con los restos caritatitvos que 
-        alguien en algun momento determinado te quiera regalar. Esa mentalidad enfermiza hace que te conformes con cualquier cosa, sea
-        buena o sea mala y te olvides de ti, no en un alarde generoso de amor verdadero o como acto de entrega, sino en un "contal de que 
-        este a mi lado hare y aguatare lo que sea".</p>
-    <p>A la hora de escoger una persona para compartir tu vida, siempre debe sumar, añadirle algo, aportar, hacerte bien en definitiva. Si
-        vas tocando desenfrenada y desesperadamente en todas las puertas que encuentras puede que el dia que te abran te "enganches" y termines
-    siendo esclavizado por tus propios sentimientos. </p>
+                </p>
+        </div>
 
-</div>
+        <div id="vision" class="col-sm-4  text-center p-5">
+            <label for="Vision"><b><u>No Vayas Por Ahi Mendigando Amor</u></b></label>
+            <br>
+            <p> Si vas por el mundo mendigando amor probablemente te encontraras con las migajas, con los restos caritatitvos que
+                alguien en algun momento determinado te quiera regalar. Esa mentalidad enfermiza hace que te conformes con cualquier cosa, sea
+                buena o sea mala y te olvides de ti, no en un alarde generoso de amor verdadero o como acto de entrega, sino en un "contal de que
+                este a mi lado hare y aguatare lo que sea".</p>
+            <p>A la hora de escoger una persona para compartir tu vida, siempre debe sumar, añadirle algo, aportar, hacerte bien en definitiva. Si
+                vas tocando desenfrenada y desesperadamente en todas las puertas que encuentras puede que el dia que te abran te "enganches" y termines
+                siendo esclavizado por tus propios sentimientos. </p>
+
+        </div>
 
 
-<div id="historia" class="col-sm-4 text-center p-5">
+        <div id="historia" class="col-sm-4 text-center p-5">
 
-    <label for="historia"><b><u>Historia Apple</u></b></label>
-    <p> Apple Inc. es una empresa estadounidense que diseña y produce equipos electrónicos, software y
-        servicios en línea. Tiene su sede central en el Apple Park, en Cupertino (California, Estados
-        Unidos) y la sede europea en la ciudad de Cork (Irlanda).3​Sus productos de hardware incluyen el
-        teléfono inteligente iPhone, la tableta iPad, el ordenador personal Mac, el reproductor de medios
-        portátil iPod, el reloj inteligente Apple Watch y el reproductor de medios digitales Apple TV. Entre
-        el software de Apple se encuentran los sistemas operativos iOS, macOS, watchOS y tvOS, el explorador
-        de contenido multimedia iTunes, la suite iWork (software de productividad), Final Cut Pro X (una
-        suite de edición de vídeo profesional), Logic Pro (software para edición de audio en pistas de
-        audio), Xsan (software para el intercambio de datos entre servidores) y el navegador web Safari.
-    </p>
-</div>
-</div>
+            <label for="historia"><b><u>Barreras Mentales</u></b></label>
+            <p> Son aquellas creencias personales que nos impiden realizar una actividad, tener cierta actitud especifica o simplemente
+                nos hacen creer en algo que ni es cierto; Y es que son tan poderosas, que limitan nuestra capacidad de pensar objetivamente
+                sobre nuestra capacidad de pensar onjetivamente sobre nosotros mismos frente a alguna situacion que afrontamos, estas limitaciones
+                existen por diversas razones, como desde nuetra crianza, experiencias negativas del pasado, creencias, entre otras pero, al al final
+                no son mas que predisposiciones emocionales.
+            </p>
+            <br>
+            <p>
+                Piesen por un momento, si todas esas veces que se han creido incapaces de acercarse a una mujer
+                para conocerla, ha sido porque tienen miedo de lo que pueda pasar, aun pensando en que pueda ser bueno,
+                o son las barreras mentales que han llenado sus pensamientos de preconcepciones y han preferido dejar
+                pasar la oportunidad; O en esa idea de negocios que tienen es su cabeza desde hace mucho tiempo, y que han
+                comenzado a llevarla a cabo por falta de tiempo, recursos, experiencia, etc.
+            </p>
+        </div>
+    </div>
 
 
 
@@ -150,9 +164,7 @@
     <div class="row">
         <div class="col-sm my-auto">
             <div class="card-block" align="center">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/6vqqscfR95Q" frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/6vqqscfR95Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
             </div>
         </div>
