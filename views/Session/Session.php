@@ -37,7 +37,8 @@
                                     </button>
                                 </div>
                                 <input type="submit" class="btn btn-lg btn-primary btn-block" value="Ingresar" >
-                                <!-- <input type="button" class="btn btn-lg btn-primary btn-block" value="Ingresar" onclick="$(location).attr('href','../../web/pages/');"> -->
+                                <!-- <input type="button" class="btn btn-lg btn-primary btn-block" value="Ingresar" onclick="$(location).attr('href','web/pages/');"> -->
+                                <!-- <input type="button" class="btn btn-lg btn-primary btn-block" value="Ingresar" onclick="$(location).attr('href','web/pages/modify.php');"> -->
 
                             </fieldset>
                         </form>
@@ -93,12 +94,14 @@ $(document).ready(function () {
             }).done((res) => {
             // TODO: add the fields
                 location.href = "web/pages";
-                if(res.typeAnswer == "success"){
-                    swal({
-                       title: 'Registro Exitoso',
-                       type: ' success'
-                    })
-                }
+                // location.href = "web/pages/modify.php";
+                // location.href = "web/pages/index-modify.php";
+                // if(res.typeAnswer == "success"){
+                //     swal({
+                //        title: 'Registro Exitoso',
+                //        type: ' success'
+                //     })
+                // }
             })
             
            

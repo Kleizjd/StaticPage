@@ -1,7 +1,7 @@
 
 <?php
 
-use function PHPSTORM_META\type;
+// use function PHPSTORM_META\type;
 
 @session_start();
 include_once "../../config/connection.php";
@@ -12,12 +12,17 @@ class Session extends connection {
     public function createSession(){
         extract($_POST);
         $answer = array();
-        $sqlUser = "SELECT * FROM usuario WHERE correo = '$user' AND contrasena = '$password'";
-        $sql = $this->consult($sqlUser);
-        if($sql != null){
-            
-            $answer['typeAnswer'] = "success";
-        }
+        $sqlUser = "SELECT id_rol, correo, CONCAT(nombres, ' ', apellidos) AS Nombre_Completo FROM usuario WHERE correo = '$user' AND contrasena = '$password'";
+        $sql = $this->execute($sqlUser);
+        
+            $row = $sql->fetch_assoc();
+            if($sql != null){
+                
+                $_SESSION['Nombre_Completo'] = str_replace("*", "", $row['Nombre_Completo']);
+                $_SESSION['rol_usuario'] = $row['id_rol'];
+                $_SESSION['correo_login'] = $row['correo'];
+                $answer['typeAnswer'] = "success";
+            }
         echo json_encode($answer);
     }
 
@@ -44,5 +49,8 @@ class Session extends connection {
     public function closeSession() {
         @session_unset();
         @session_destroy();
+        // echo json_encode(array("typeAnswer" => "success"));
+
+        
     }
 }
