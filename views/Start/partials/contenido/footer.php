@@ -14,7 +14,7 @@
 						<li><a href="#">Inicio</a></li>
 					</ul>
 				</div>
-                <div class="col-md-4 col-sm-4 footer-info-grid address">
+                <!-- <div class="col-md-4 col-sm-4 footer-info-grid address">
 					<h4>Direccion</h4>
 					<address>
 						<ul>
@@ -25,7 +25,7 @@
 							<li>Email : <a class="mail" href="mailto:jose.dgo97@gmail.com">info jose.dgo97@gmail.com</a></li>
 						</ul>
 					</address>
-				</div>
+				</div> -->
 				<div class="col-md-4 col-sm-4 footer-info-grid email">
 					<h4>Boletin</h4>
 					<p>Suscríbase a nuestro boletín y le informaremos sobre los proyectos y promociones más recientes.
