@@ -8,7 +8,7 @@ date_default_timezone_set("America/Bogota");
 ?>
 <?php if (isset($_SESSION['rol_usuario'])) : ?>
     <?php if ($_SESSION["rol_usuario"] == 1) : ?>
-        <?php include_once "paciente.php" ?>
+        <?php include_once "patient.php" ?>
     <?php else : ?>
         <!DOCTYPE html>
         <html lang="es">

@@ -1,4 +1,20 @@
 $(document).ready(function () {
+    //======================[  Search ANSWER   ]=========================// 
+        $(function viewSearchEmail() {
+            $(document).on("click", "#viewSearchByEmail", function () {
+            // $("#userID").val()
+            // $(this).attr("userId")
+            let correo = new Object();
+
+            if(){
+                callView("Admin", "Admin", "viewAcount", correo);   
+
+            }
+
+            });
+        });
+    
+    //=============================[  PRODUCT  ]=========================// 
     //======================[  Acount  ]=========================// 
         $(function viewAcount() {
             $(document).on("click", "#viewAcount", function () {
@@ -65,5 +81,5 @@ $(document).ready(function () {
         });
         // -------------------------------------------------------------//
         /****SHOW MODAL Search PROVIDER**/
-        $(document).on("click", "#SearchProvider",
+        // $(document).on("click", "#SearchProvider",
     

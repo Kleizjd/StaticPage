@@ -92,7 +92,8 @@
     <div class="row justify-content-md-center">
         <div class="col-md-8 ">
             <h4 class="mb-3">Buena Suerte </h4>
-            <form class="needs-validation" novalidate>
+            <form action="" id="form_Survey" method="POST" class="needs-validation" novalidate>
+                <input type="hidden" name="correo" value="<?= $_SESSION['correo_login']; ?>">
                 <div class="mb-3">
                     <label for="numberOne">1. ¿Cuál es la diferencia entre vivir y existir?</label>
                     <div class="input-group">
@@ -112,9 +113,9 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="numberTree">3. ¿Qué harías de otra manera si supieras que nadie te juzgará?</label>
+                    <label for="numberThree">3. ¿Qué harías de otra manera si supieras que nadie te juzgará?</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" id="numberTree" name="numberTree" placeholder="¿Qué harías de otra manera si supieras que nadie te juzgará?" required>
+                        <input type="text" class="form-control" id="numberThree" name="numberThree" placeholder="¿Qué harías de otra manera si supieras que nadie te juzgará?" required>
                         <div class="invalid-feedback" style="width: 100%;">
                             this question is required.
                         </div>
@@ -132,7 +133,7 @@
                 <div class="mb-3">
                     <label for="numberFive">5. ¿Cómo podemos tener relaciones saludables?</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" id="numberFive" id="numberFive" placeholder="¿Cómo podemos tener relaciones saludables?" required>
+                        <input type="text" class="form-control" id="numberFive" name="numberFive" placeholder="¿Cómo podemos tener relaciones saludables?" required>
                         <div class="invalid-feedback" style="width: 100%;">
                             this question is required.
                         </div>
@@ -216,3 +217,36 @@
 </body>
 
 </html>
+<script>
+    $(document).ready(function(){
+        $(function answerSurvey(){
+            $(document).on("submit", "#form_Survey", function(event){
+            event.preventDefault();
+                var formData = new FormData(event.target);
+                // TODO: add the fields
+                
+                formData.append('module', 'Survey');
+                formData.append('controller', 'Survey');
+                formData.append('nameFunction', 'answerSurvey');
+                
+                $.ajax({
+                    url: '../../app/lib/ajax.php',
+                    method: $(this).attr('method'),
+                    dataType: 'JSON',
+                    data: formData ,
+                    cache: false,
+                    processData: false,
+                    contentType: false
+                }).done((res) => {
+                // TODO: add the fields
+                    if(res.typeAnswer == "success"){
+                        swal({
+                        title: "Enviado con exito",
+                        type: "success"
+                    });
+                    }
+                })
+            });
+        });
+    });
+</script>

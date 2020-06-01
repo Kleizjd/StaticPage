@@ -4,7 +4,7 @@
 <!-- <link rel="shortcut icon" href="../../public/img2/favicon.ico" type="image/x-icon"> -->
 
 <!-- <meta name="description" content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3"> -->
-<title>JD Production</title>
+<title>PsicoApp/web</title>
 <!-- For-Mobile-Apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> -->
