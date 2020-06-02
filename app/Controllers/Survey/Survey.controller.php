@@ -24,12 +24,16 @@ class Survey extends connection {
         }
         echo json_encode(array('typeAnswer' => $answer));
     }
-    public function geSurvey(){
+    public function getSurvey(){
         extract($_POST);
 
         if($correo != ""){
-            $sqlForm = $this->execute("SELECT * FROM form_survey WHERE correo = $correo");
+            // $sqlForm = $this->execute("SELECT * FROM form_survey WHERE correo = $correo");
+            $survey = $this->consult("SELECT preguntas.id_pregunta, texto_pregunta, respuesta 
+                                        FROM preguntas, respuestas_preguntas 
+                                        WHERE preguntas.id_pregunta = respuestas_preguntas.id_pregunta
+                                        AND correo = $correo");
         }
-        echo json_encode($answer);
+        include_once "../../views/product/view.WatchProduct.php";
     }
 }

@@ -12,8 +12,8 @@
         <label class="font-weight-bold mr-sm-2" for="nit">todos</label>
       </div> -->
       <div class="nav-item">
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Buscar por Correo" aria-label="Search">
+        <form id="form_searchEmail" method="POST" class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Buscar por Correo" aria-label="Search" id="correo" name="correo">
           <button class="btn btn-outline-success my-2 my-sm-0  mr-sm-2" type="submit">
             <i class="fa fa-search"></i></button>
         </form>

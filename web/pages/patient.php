@@ -243,7 +243,7 @@
                         swal({
                         title: "Enviado con exito",
                         type: "success"
-                    });
+                     });
                     }
                 })
             });
