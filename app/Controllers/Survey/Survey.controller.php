@@ -17,7 +17,6 @@ class Survey extends connection {
                                                                                 ('$correo', 8, $numberEight),
                                                                                 ('$correo', 9, $numberNine),
                                                                                 ('$correo', 10, $numberTen)";
-                                                                                // echo "este es sql <br>".$sql;
         $sqlSurvey = $this->execute($sql);                                                                     
         if($sqlSurvey!=null){
             $answer = "success";
@@ -29,16 +28,15 @@ class Survey extends connection {
         // var_dump($_POST);
         // echo $correo;
         if($correo != ""){
-            // $sqlForm = $this->execute("SELECT * FROM form_survey WHERE correo = $correo");
-            // $survey = $this->consult("SELECT preguntas.id_pregunta, texto_pregunta, respuesta 
-            //                             FROM preguntas, respuestas_preguntas 
-            //                             WHERE preguntas.id_pregunta = respuestas_preguntas.id_pregunta
-            //                             AND correo = $correo");
+            echo "SELECT preguntas.id_pregunta, texto_pregunta, respuesta FROM preguntas, respuestas_preguntas 
+            WHERE preguntas.id_pregunta = respuestas_preguntas.id_pregunta
+            AND correo = '$correo'";
+           // $sqlBuscar = "SELECT preguntas.id_pregunta, texto_pregunta, respuesta FROM preguntas, respuestas_preguntas 
+           // WHERE preguntas.id_pregunta = respuestas_preguntas.id_pregunta
+            //AND correo = '$correo'";
+
         }
-        echo "SELECT preguntas.id_pregunta, texto_pregunta, respuesta 
-        //                             FROM preguntas, respuestas_preguntas 
-        //                             WHERE preguntas.id_pregunta = respuestas_preguntas.id_pregunta
-        //                             AND correo = $correo";
+
         // include_once "../../views/product/view.WatchProduct.php";
     }
 }
