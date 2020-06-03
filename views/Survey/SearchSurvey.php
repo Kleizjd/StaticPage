@@ -35,9 +35,6 @@
                 <label for="numberOne">1. <?= $userEmail["texto_pregunta"]; ?></label>
                 <div class="input-group">
                     <input type="text" class="form-control" value="<?= $userEmail["respuesta"]; ?>" disabled>
-                    <div class="invalid-feedback" style="width: 100%;">
-                        this question is required.
-                    </div>
                 </div>
             </div>
         </div>
