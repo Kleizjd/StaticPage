@@ -26,14 +26,19 @@ class Survey extends connection {
     }
     public function getSurvey(){
         extract($_POST);
-
+        // var_dump($_POST);
+        // echo $correo;
         if($correo != ""){
             // $sqlForm = $this->execute("SELECT * FROM form_survey WHERE correo = $correo");
-            $survey = $this->consult("SELECT preguntas.id_pregunta, texto_pregunta, respuesta 
-                                        FROM preguntas, respuestas_preguntas 
-                                        WHERE preguntas.id_pregunta = respuestas_preguntas.id_pregunta
-                                        AND correo = $correo");
+            // $survey = $this->consult("SELECT preguntas.id_pregunta, texto_pregunta, respuesta 
+            //                             FROM preguntas, respuestas_preguntas 
+            //                             WHERE preguntas.id_pregunta = respuestas_preguntas.id_pregunta
+            //                             AND correo = $correo");
         }
-        include_once "../../views/product/view.WatchProduct.php";
+        echo "SELECT preguntas.id_pregunta, texto_pregunta, respuesta 
+        //                             FROM preguntas, respuestas_preguntas 
+        //                             WHERE preguntas.id_pregunta = respuestas_preguntas.id_pregunta
+        //                             AND correo = $correo";
+        // include_once "../../views/product/view.WatchProduct.php";
     }
 }
