@@ -12,10 +12,13 @@
         <label class="font-weight-bold mr-sm-2" for="nit">todos</label>
       </div> -->
       <div class="nav-item">
-        <form id="form_searchEmail" method="POST" class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Buscar por Correo" aria-label="Search" id="correo" name="correo">
-          <button class="btn btn-outline-success my-2 my-sm-0  mr-sm-2" type="submit">
-            <i class="fa fa-search"></i></button>
+        <form id="form_searchEmail" method="POST" class="form-inline my-4 my-lg-0">
+          <!-- <input class="form-control mr-sm-2" type="search" placeholder="Buscar por Correo" aria-label="Search" id="correo" name="correo"> -->
+          <li class="nav-item dropdown mr-sm-1">
+          <select name="correo[]" id="correo" class="select2 form-control" title="buscar"></select>
+          </li>
+          <button class="btn btn-outline-success my-2 my-sm-0  mr-sm-2"  type="submit">
+            <i class="fa fa-search" ></i></button>
         </form>
       </div>
 
@@ -30,12 +33,12 @@
           <i class="fas fa-bell fa-fw"></i>
           <!-- <span class="badge badge-danger">9+</span> -->
         </a>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
+        <!-- <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
           <a class="dropdown-item" href="#">Action</a>
           <a class="dropdown-item" href="#">Another action</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a>
-        </div>
+        </div> -->
       </li>
       <li class="nav-item dropdown no-arrow mx-1">
         <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -53,12 +56,32 @@
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
           <a class="dropdown-item" href="#" id="viewAcount">
             <input type="hidden" name="userId" id="userId" value="<?= $_SESSION['user_id']; ?>">
-            <i class="fas fa-cog">&nbsp;Configuracion</i></a>
+            <!-- <i class="fas fa-cog">&nbsp;Configuracion</i></a>
           <a class="dropdown-item" href="#">Activity Log</a>
-          <div class="dropdown-divider"></div>
+          <div class="dropdown-divider"></div> -->
           <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Salir</a>
         </div>
       </li>
     </ul>
 
 </nav>
+<script>
+$(document).ready(function () {
+  $("#correo").select2({width: "300px", theme: "classic"});
+
+  $(function selectEmails() {
+    $.ajax({
+      url: "../../app/lib/ajax.php",
+      method: "post",
+      data: {
+        module: "Survey",
+        controller: "Survey",
+        nameFunction: "selectEmail"
+      },
+    }).done((res) => {
+      $("#correo").html(res);
+    });
+  });
+
+});
+</script>

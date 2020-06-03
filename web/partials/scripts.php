@@ -39,6 +39,7 @@
 
 <!-- Cleave Js -> Format your <input/> content when you are typing. -->
 <script src="../../vendor/cleave/cleave.min.js"></script>
+<script src="../../vendor/select2/js/select2.min.js"></script>
 
 <!-- Higcharts Js -> Highcharts makes it easy for developers to set up interactive charts in their web pages. -->
 <script src="../../vendor/higcharts/code/highstock.js"></script>

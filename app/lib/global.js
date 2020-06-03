@@ -17,3 +17,9 @@ function callView(module, controller, nameFunction, parameters, blank){
     $(`#Data${nameFunction}`).submit();
     $(`#Data${nameFunction}`).remove();
 }
+
+// $('.select2').select2({
+//     width: "100%",
+//     // dropdownParent: $('#maraton-program')
+// });
+

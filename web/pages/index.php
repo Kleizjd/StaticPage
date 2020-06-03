@@ -7,7 +7,7 @@ date_default_timezone_set("America/Bogota");
 // @sessionLife();
 ?>
 <?php if (isset($_SESSION['rol_usuario'])) : ?>
-    <?php if ($_SESSION["rol_usuario"] == 1) : ?>
+    <?php if ($_SESSION["rol_usuario"] == 2) : ?>
         <?php include_once "patient.php" ?>
     <?php else : ?>
         <!DOCTYPE html>
@@ -16,11 +16,13 @@ date_default_timezone_set("America/Bogota");
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
+            
             <link rel="stylesheet" href="../../vendor/styles-js/css/owl.carousel.css" type="text/css" media="all" />
             <!-- Popup-Box-CSS -->
             <link rel="stylesheet" href="../../vendor/styles-js/css/popuo-box.css" type="text/css" media="all" />
+            
             <!-- Left-Menu-Css-->
-            <link rel="stylesheet" href="../partials/left-menu.css">
+            <!-- <link rel="stylesheet" href="../partials/left-menu.css"> -->
             <?php include_once "../partials/head.php" ?>
         </head>
 
@@ -33,15 +35,15 @@ date_default_timezone_set("America/Bogota");
                     <!-- //Navbar -->
                 </div>
                 <!-- sidebar-wrapper  -->
-                <!-- NO MENU LEFT ON PROYECT -->
-                <div class="d-md-flex">
-                    <!-- SIDE_BAR -->
-                    <div id="page-wrapper" class="p-4">
-                        <div class="container-fluid " id="cargarVista">
-                            <?php include_once "../../app/lib/ajax.php"; ?>
+                        <!-- NO MENU LEFT ON PROYECT -->
+                    <!-- <div class="d-md-flex"> -->
+                        <!-- SIDE_BAR -->
+                        <div id="page-wrapper" class="p-4">
+                            <div class="container-fluid" id="cargarVista">
+                                <?php include_once "../../app/lib/ajax.php"; ?>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    <!-- </div> -->
                 <!-- sidebar-wrapper  -->
                 <?php include_once "../partials/log-out.php"; ?>
                 <!-- SCRIPTS -->
