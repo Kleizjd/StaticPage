@@ -37,6 +37,5 @@
 <link href="../../vendor/select2/css/select2-bootstrap.min.css?v=<?= rand(); ?>" rel="stylesheet">
 
 <!-- Dinamic Web -->
-<script src="../../app/lib/global.js"></script>
+<script src="../../app/lib/route.js"></script>
 <!-- Global js -->
-<!-- <script src="../../public/js/scripts/global.js?v=<?=rand(); ?>"></script> -->

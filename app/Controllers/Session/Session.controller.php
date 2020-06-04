@@ -16,12 +16,14 @@ class Session extends connection {
         $sql = $this->execute($sqlUser);
         
             $row = $sql->fetch_assoc();
-            if($sql != null){
-                
+            // var_dump($sql);
+            if(mysqli_num_rows($sql) != 0){
                 $_SESSION['Nombre_Completo'] = str_replace("*", "", $row['Nombre_Completo']);
                 $_SESSION['rol_usuario'] = $row['id_rol'];
                 $_SESSION['correo_login'] = $row['correo'];
-                $answer['typeAnswer'] = "success";
+                $answer['typeAnswer'] = true;
+            } else {
+                $answer['typeAnswer'] = false;
             }
         echo json_encode($answer);
     }
@@ -36,7 +38,7 @@ class Session extends connection {
        $answer = array();
        
        if($password == $passwordVerify){
-            $sqlRegister ="INSERT INTO usuario (id_persona,correo, contrasena, id_rol, nombres, apellidos) VALUES ( null,'$inputEmail', '$password' ,  1, '$firstName', '$lastName' )";
+            $sqlRegister ="INSERT INTO usuario (id_persona,correo, contrasena, id_rol, nombres, apellidos) VALUES ( null,'$inputEmail', '$password' ,  2, '$firstName', '$lastName' )";
             $sql = $this->execute($sqlRegister);
             if($sql != null){
              $answer['typeAnswer'] = "success";

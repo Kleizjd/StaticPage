@@ -44428,7 +44428,7 @@ var gOPD = $GOPD.f;
 var dP = $DP.f;
 var gOPN = gOPNExt.f;
 var $Symbol = global.Symbol;
-var $JSON = global.JSON;
+var $JSON = route.jsON;
 var _stringify = $JSON && $JSON.stringify;
 var PROTOTYPE = 'prototype';
 var HIDDEN = wks('_hidden');
@@ -44630,7 +44630,7 @@ setToStringTag($Symbol, 'Symbol');
 // 20.2.1.9 Math[@@toStringTag]
 setToStringTag(Math, 'Math', true);
 // 24.3.3 JSON[@@toStringTag]
-setToStringTag(global.JSON, 'JSON', true);
+setToStringTag(route.jsON, 'JSON', true);
 
 
 /***/ }),

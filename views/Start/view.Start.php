@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="vendor/bootstrap-4.4.1-dist/css/bootstrap.min.css">
     <!-- Popup-Box-CSS -->
     <link rel="stylesheet" href="vendor/styles-js/css/popuo-box.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css" type="text/css">
+    <link rel="stylesheet" href="vendor/sweetalert/css/sweetalert2.min.css">
+    <link rel="shortcut icon" href="public/img/favicon/logo.png" type="image/x-icon">
     <!-- <link rel="stylesheet" href="vendor/css/style.css"> -->
     <style>
         /* #cuerpo {
@@ -145,12 +148,8 @@
             <!-- BODY -->
             <?php // include_once "app/lib/ajax.php"; <<< UNABLE HERE >>
 
-            $page  = isset($_GET['p']) ? strtolower($_GET['p']) : 'main';
-            if ($page  == 'main') {
-                require_once 'views/Start/' . $page . '.php';
-            } else {
-                require_once 'views/' . $page . '.php';
-            }
+                 $page  = isset($_GET['p']) ? strtolower($_GET['p']) : 'main';
+              if ($page  == 'main') { require_once 'views/Start/' . $page . '.php'; } else {  require_once 'views/' . $page . '.php'; }
             ?>
         </div>
         <!-- SCRIPTS -->

@@ -36,14 +36,14 @@ date_default_timezone_set("America/Bogota");
                 </div>
                 <!-- sidebar-wrapper  -->
                         <!-- NO MENU LEFT ON PROYECT -->
-                    <!-- <div class="d-md-flex"> -->
+                    <div class="d-md-flex">
                         <!-- SIDE_BAR -->
                         <div id="page-wrapper" class="p-4">
                             <div class="container-fluid" id="cargarVista">
                                 <?php include_once "../../app/lib/ajax.php"; ?>
                             </div>
                         </div>
-                    <!-- </div> -->
+                    </div>
                 <!-- sidebar-wrapper  -->
                 <?php include_once "../partials/log-out.php"; ?>
                 <!-- SCRIPTS -->

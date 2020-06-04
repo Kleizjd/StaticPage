@@ -1,17 +1,12 @@
-    <!-- SCRYPTS -->
+    <!-- //////////////////////[SCRYPTS]/////////////////////////////  -->
+<script src="app/lib/global.js"></script>
 <!-- Supportive-JavaScript -->
-<script type="text/javascript" src="vendor/styles-js/js/jquery.min.js"></script>
-
+<script src="vendor/sweetalert/js/sweetalert2.min.js"></script>
 <!-- Banner-Slider-JavaScript -->
 <script src="vendor/styles-js/js/responsiveslides.min.js"></script>
 <!--  responsive -->
 <script src="vendor/bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
 <!--  //responsive -->
-
-
-
-
-
 
 <!-- Owl Carousel -->
 <script src="vendor/styles-js/js/owl.carousel.js"></script>

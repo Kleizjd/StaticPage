@@ -32,7 +32,7 @@
     <div class="row justify-content-md-center">
         <div class="col-sm-8 col-lg-8">
             <div class="mb-3">
-                <label for="numberOne">1. <?= $userEmail["texto_pregunta"]; ?></label>
+                <label for="numberOne"> <?= $userEmail["id_pregunta"];?>. <?= $userEmail["texto_pregunta"]; ?></label>
                 <div class="input-group">
                     <input type="text" class="form-control" value="<?= $userEmail["respuesta"]; ?>" disabled>
                 </div>

@@ -1,7 +1,7 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
-  (factory((global.jsPDF = {})));
+  (factory((route.jsPDF = {})));
 }(this, (function (exports) { 'use strict';
 
   /**
@@ -4897,7 +4897,7 @@
       module.exports = jsPDF;
       module.exports.jsPDF = jsPDF;
     } else {
-      global.jsPDF = jsPDF;
+      route.jsPDF = jsPDF;
     }
 
     return jsPDF;
