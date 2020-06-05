@@ -13,13 +13,13 @@
                                     <div class="form-row">
                                         <div class="col-md-6">
                                             <div class="form-label-group">
-                                                <input type="text" id="firstName" name="firstName" class="form-control" placeholder="Nombres" autofocus="autofocus">
+                                                <input type="text" id="firstName" name="firstName" class="form-control" placeholder="Nombres" autofocus="autofocus" required>
                                                 <!-- <label for="firstName">Primer name</label> -->
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-label-group">
-                                                <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Apellidos" >
+                                                <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Apellidos" required>
                                                 <!-- <label for="lastName">Last name</label> -->
                                             </div>
                                         </div>
@@ -28,8 +28,8 @@
                                 <div class="form-group">
                                     <div class="form-label-group">
                                         <!-- <input type="email" class="form-control" placeholder="Email address" name="inputEmail" id="inputEmail" > -->
-                                        <input type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Email address" 
-                                         data='<?= json_encode(array("typeNit" => "correo", "table" => "usuario", "field" => "correo")); ?>'>
+                                        <input type="email" class="form-control" id="validateKey" name="inputEmail" placeholder="Email address" 
+                                         data='<?= json_encode(array("typeNit" => "correo", "table" => "usuario", "field" => "correo")); ?>' required>
 
                                     </div>
                                 </div>
@@ -44,7 +44,6 @@
                                 <!-- <input type="button" class="btn btn-lg btn-primary btn-block" value="Registrar" onclick="$(location).attr('href','web/pages/index.html.php');"> -->
 
                             </fieldset>
-
                             <a href="javascript:window.history.back();">&laquo; Volver atrás</a>
                         </form>
                     </div>
@@ -73,11 +72,10 @@
                 contentType: false
             }).done((res) => {
                 // TODO: add the fields
-                if (res.typeAnswer == "success") {
-                    swal({
-                        title: 'Registro Exitoso',
-                        type: ' success'
-                    })
+                if (res.typeAnswer == true) {
+                    swal({ title: 'Registro Exitoso', type: ' success' })
+                } else {
+                    swal({ title: 'contraseñas no coinciden', text: 'verifique por favor', type: ' warning' })
                 }
             })
         });

@@ -13,5 +13,15 @@ $(document).ready(function () {
       }
     });
   });
+  //======================[  Acount  ]=========================//	
+	$(function viewAcount() {
+		$(document).on("click", "#viewAcount", function () {
+		// $("#userID").val()
+		// $(this).attr("userId")
+		let userId = new Object();
+		 userId["userId"] = $("#userId").val();
+			callView("Admin", "Admin", "viewAcount", userId);	
+		});
+	});
 
 });

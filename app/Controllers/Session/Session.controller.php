@@ -12,16 +12,20 @@ class Session extends connection {
     public function createSession(){
         extract($_POST);
         $answer = array();
-        $sqlUser = "SELECT id_rol, correo, CONCAT(nombres, ' ', apellidos) AS Nombre_Completo FROM usuario WHERE correo = '$user' AND contrasena = '$password'";
+        $sqlUser = "SELECT id_rol, correo, contrasena, CONCAT(nombres, ' ', apellidos) AS Nombre_Completo FROM usuario WHERE correo = '$user' ";
         $sql = $this->execute($sqlUser);
         
-            $row = $sql->fetch_assoc();
-            // var_dump($sql);
             if(mysqli_num_rows($sql) != 0){
-                $_SESSION['Nombre_Completo'] = str_replace("*", "", $row['Nombre_Completo']);
-                $_SESSION['rol_usuario'] = $row['id_rol'];
-                $_SESSION['correo_login'] = $row['correo'];
-                $answer['typeAnswer'] = true;
+                $row = $sql->fetch_assoc();
+                $passwordDB = $row['contrasena'];
+              
+                if (password_verify($password, $passwordDB)) {
+
+                    $_SESSION['Nombre_Completo'] = str_replace("*", "", $row['Nombre_Completo']);
+                    $_SESSION['rol_usuario'] = $row['id_rol'];
+                    $_SESSION['correo_login'] = $row['correo'];
+                    $answer['typeAnswer'] = true;
+                }
             } else {
                 $answer['typeAnswer'] = false;
             }
@@ -30,24 +34,61 @@ class Session extends connection {
 
 
     
-    public function recoverPassword(){
-     
-    }
+   
     public function registerUser() {
         extract($_POST);
        $answer = array();
        
        if($password == $passwordVerify){
-            $sqlRegister ="INSERT INTO usuario (id_persona,correo, contrasena, id_rol, nombres, apellidos) VALUES ( null,'$inputEmail', '$password' ,  2, '$firstName', '$lastName' )";
+           //Encriptar-----------------------------------------------------------------------
+            $bytes = random_bytes(22); $options = [ 'cost' => 10,  'salt' => bin2hex($bytes) ];
+            $passEncrypt = password_hash($password, PASSWORD_BCRYPT, $options);
+            //-------------------------------------------------------------------------------
+
+            $sqlRegister ="INSERT INTO usuario (id_persona,correo, contrasena, id_rol, nombres, apellidos) VALUES ( null,'$inputEmail', '$passEncrypt' ,  2, '$firstName', '$lastName' )";
             $sql = $this->execute($sqlRegister);
             if($sql != null){
-             $answer['typeAnswer'] = "success";
+             $answer['typeAnswer'] = true;
 
             }
+       } else {
+            $answer['typeAnswer'] = false;
        }
        echo json_encode($answer);
     }
+    public function recoverPassword(){
+        // var_dump($_POST);
+        $obtain = $this->getConnection();
+        $correo = $obtain->real_escape_string($_POST["email_user"]);
+        $answer = array();
+        // echo "SELECT contrasena FROM usuario WHERE correo = '$correo' ";
+        $sql = $this->execute("SELECT contrasena FROM usuario WHERE correo = '$correo' ");
 
+        if ($sql->num_rows == 1) {
+            $fila = $sql->fetch_assoc();
+            $contrabd = $fila['contrasena'];
+            $sql = $this-> execute("UPDATE usuario SET codigo_recuperacion = '". md5($contrabd) . "' WHERE correo = '$correo' ");
+   
+			$link = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']."?ptk=".md5($contrabd)."&p2=".$correo;
+
+
+            //Envío del email
+            $asunto = "Recuperación de Contraseña";
+            $mens_email = file_get_contents("../../views/Session/correo.html");
+            $mens_email = str_replace("<ENLACE>", $link, $mens_email);
+            $cabecera = "MIME-Version: 1.0" . "\r\n" ."Content-type:text/html;charset=UTF-8" . "\r\n" ."From: jose.jdgo97@gmail.com" . "\r\n" ."Reply-To: jose.jdgo97@gmail.com" . "\r\n" ."X-Mailer: PHP/" . phpversion();
+
+            mail($correo, $asunto, $mens_email, $cabecera);
+          
+            $answer["typeAnswer"] = true;
+            $answer["link"]= $link;
+        } else {
+            $answer["typeAnswer"] = false;
+        }
+        // echo json_encode($answer);
+        // echo json_encode($answer);
+        
+     }
     public function closeSession() {
         @session_unset();
         @session_destroy();

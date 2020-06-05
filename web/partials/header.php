@@ -55,10 +55,10 @@
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
           <a class="dropdown-item" href="#" id="viewAcount">
-            <input type="hidden" name="userId" id="userId" value="<?= $_SESSION['user_id']; ?>">
-            <!-- <i class="fas fa-cog">&nbsp;Configuracion</i></a>
-          <a class="dropdown-item" href="#">Activity Log</a>
-          <div class="dropdown-divider"></div> -->
+            <input type="hidden" name="userId" id="userId" value="<?= $_SESSION['correo_login']; ?>">
+           <i class="fas fa-cog">&nbsp;Configuracion</i></a>
+        <!--    <a class="dropdown-item" href="#">Activity Log</a>-->
+          <div class="dropdown-divider"></div> 
           <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Salir</a>
         </div>
       </li>

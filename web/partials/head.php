@@ -38,4 +38,5 @@
 
 <!-- Dinamic Web -->
 <script src="../../app/lib/route.js"></script>
+<script src="../../app/lib/global.js"></script>
 <!-- Global js -->

@@ -31,7 +31,7 @@
                         <div class="text-center">
                             <a class="d-block small mt-3" href="?p=Session/Register">Crear Usuario</a>
 
-                            <a class="d-block small mt-3  " href="forgot-password.html">olvidaste la contrasena?</a>
+                            <a class="d-block small mt-3  " href="views/Session/forgot-password.php">olvidaste la contrasena?</a>
                         </div>
                     </div>
                 </div>

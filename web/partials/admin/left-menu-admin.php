@@ -6,7 +6,7 @@
           <span>Dashboard</span>
         </a>
       </li> -->
-   <li class="nav-item dropdown">
+   <!-- <li class="nav-item dropdown">
      <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
        <i class="fas fa-fw fa-folder"></i>
        <span>Archivos</span>
@@ -16,8 +16,8 @@
        <a class="dropdown-item " id="showCustomer">Clientes</a>
        <a class="dropdown-item" id="showProvider">Proveedores</a>
      </div>
-   </li>
-   <li class="nav-item dropdown">
+   </li> -->
+   <!-- <li class="nav-item dropdown">
      <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
        <i class="fas fa-box"></i>
        <span>Ventas</span>
@@ -45,7 +45,7 @@
 
 
      </div>
-   </li>
+   </li> -->
    <li class="nav-item dropdown">
      <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
        <i class="fa fa-key"></i>
@@ -57,30 +57,4 @@
 
      </div>
    </li>
-
-   <form name="clock">
-     <div class="text-center contenedor-div">
-       <input class="bordeado" name="face" value="">
-     </div>
-   </form>
-
  </ul>
- <!-- =========== -->
- <style>
-   .contenedor-div {
-     position: absolute;
-     bottom: 10px;
-     left: -44px;
-   }
-
-   .bordeado {
-     width: 50%;
-     height: 25px;
-     margin: 0 auto;
-     border: none;
-     /* <-- This thing here */
-     border: solid 1px #ccc;
-     border-radius: 10px;
-     text-align: center;
-   }
- </style>

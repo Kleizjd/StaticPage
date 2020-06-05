@@ -16,11 +16,12 @@ date_default_timezone_set("America/Bogota");
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
-            
+            <link rel="stylesheet" href="../../vendor/styles-js/css/my-styles.css">
+
             <link rel="stylesheet" href="../../vendor/styles-js/css/owl.carousel.css" type="text/css" media="all" />
             <!-- Popup-Box-CSS -->
             <link rel="stylesheet" href="../../vendor/styles-js/css/popuo-box.css" type="text/css" media="all" />
-            
+
             <!-- Left-Menu-Css-->
             <!-- <link rel="stylesheet" href="../partials/left-menu.css"> -->
             <?php include_once "../partials/head.php" ?>
@@ -35,18 +36,20 @@ date_default_timezone_set("America/Bogota");
                     <!-- //Navbar -->
                 </div>
                 <!-- sidebar-wrapper  -->
-                        <!-- NO MENU LEFT ON PROYECT -->
-                    <div class="d-md-flex">
-                        <!-- SIDE_BAR -->
-                        <div id="page-wrapper" class="p-4">
-                            <div class="container-fluid" id="cargarVista">
-                                <?php include_once "../../app/lib/ajax.php"; ?>
-                            </div>
+                <!-- NO MENU LEFT ON PROYECT -->
+                <div class="d-md-flex">
+                    <!-- SIDE_BAR -->
+                    <?php include_once "../partials/admin/left-menu-admin.php" ?>
+                    <div id="page-wrapper" class="p-4">
+                        <div class="container-fluid" id="cargarVista">
+                            <?php include_once "../../app/lib/ajax.php"; ?>
                         </div>
                     </div>
+                </div>
                 <!-- sidebar-wrapper  -->
                 <?php include_once "../partials/log-out.php"; ?>
                 <!-- SCRIPTS -->
+                <script src="../../vendor/sb-admin-2-2019/js/sb-admin.min.js"></script>
                 <?php include_once "../partials/scripts.php"; ?>
         </body>
 
