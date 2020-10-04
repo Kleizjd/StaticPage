@@ -6,8 +6,10 @@ $.getScript("../../routes/web.js");
 // LLAMAR LA VISTA QUE SE CARGARA CON LOS DATOS 
 function callView(module, controller, nameFunction, parameters, blank){
     // alert(" "+module+" / "+controller+" / "+nameFunction+" / "+parameters);
-    $("#cargarVista").append(`
-        <form id="Data${nameFunction}" action="./" method="post" ${blank ? `target="_blank"` : null}>
+    // <form id="Data${nameFunction}" action="./" method="post" ${blank ? `target="_blank"` : null}>
+
+    $("#loadView").append(`
+        <form id="Data${nameFunction}" action="./" method="post" >
             <input type="hidden" name="module" value=${module}>
             <input type="hidden" name="controller" value=${controller}>
             <input type="hidden" name="nameFunction" value=${nameFunction}>

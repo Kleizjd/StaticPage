@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- STYLES -->
     <script src="vendor/jquery/jquery.slim.min.js"></script>
-    <link rel="stylesheet" href="vendor/styles-js/css/style.css">
+    <link rel="stylesheet" href="assets/template/my-css-js/css/style.css">
     <!-- Owl-Carousel-CSS -->
-    <link rel="stylesheet" href="vendor/styles-js/css/owl.carousel.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="assets/template/my-css-js/css/owl.carousel.css" type="text/css" media="all" />
     <link rel="stylesheet" href="vendor/bootstrap-4.4.1-dist/css/bootstrap.min.css">
     <!-- Popup-Box-CSS -->
-    <link rel="stylesheet" href="vendor/styles-js/css/popuo-box.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="assets/template/my-css-js/css/popuo-box.css" type="text/css" media="all" />
     <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css" type="text/css">
     <link rel="stylesheet" href="vendor/sweetalert/css/sweetalert2.min.css">
     <link rel="shortcut icon" href="public/img/favicon/logo.png" type="image/x-icon">

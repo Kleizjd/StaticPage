@@ -1,87 +1,230 @@
-<nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+	<nav class="navbar top-navbar navbar-expand-md navbar-dark">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="./">
+				<span>
+					<!-- <img src="../../public/img/favicon/favicon.ico" alt="ingesoftware" height="50" width="200"> -->
+					<img src="../../public/img2/Gaming.jpg" alt="ingesoftware" height="50" width="200">
+				</span>
+			</a>
+		</div>
 
-  <a class="navbar-brand mr-1" href="index.html">PsicoApp/web </a>
+		<div class="navbar-collapse">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item hidden-sm-up"> <a class="nav-link nav-toggler waves-effect waves-light" href="javascript:void(0)"><i class="ti-menu"></i></a></li>
+				<!-- ============================================================== -->
+				<!-- Comment -->
+				<!-- ============================================================== -->
+				<li class="nav-item dropdown">
+					<a class=" nav-link dropdown-toggle waves-effect waves-dark " href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="ti-bell"></i>
+						<div class="notify" style="display: none" id="active_notify"> <span class="heartbit"></span> <span class="point"></span> </div>
+					</a>
+					<div class="dropdown-menu mailbox animated bounceInDown">
+						<span class="with-arrow"><span class="bg-primary"></span></span>
+						<ul id="notifications_message">
+							<li>
+								<div class="drop-title bg-primary text-white">
+									<h4 class="m-b-0 m-t-5" id="notificaciones">0</h4>
+									<span class="font-light">Notificaciones</span>
+								</div>
+							</li>
+							<li>
+								<div class="message-center">
+									<!-- Message -->
+									<!-- AQUI SE ANADE EL MENU DE NOTIFICACIONES QUE ES TRAIDO DEL CONTROLADOR REUNION -->
+								</div>
+							</li>
+							<li>
+								<a class="nav-link text-center m-b-5" href="javascript:void(0);">Revisa todas las notificaciones</strong> <i class="fa fa-angle-right"></i> </a>
+							</li>
+						</ul>
+					</div>
+				</li>
 
-  <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
-    <i class="fas fa-bars"></i>
-  </button>
+				<li class="nav-item search-box">
+					<a class="nav-link waves-effect waves-dark" href="javascript:void(0)">
+						<i class="fas fa-arrow-down"></i>
+					</a>
+					<form class="app-search" id="form_searchEmail">
+						<a class="nav-link waves-effect waves-dark" href="javascript:void(0)">
+							<i class="fas fa-arrow-up"></i>
+						</a>
+						<select name="correo[]" id="correo" class="select2 form-control" title="buscar"></select>
+						<!-- <input type="text" class="form-control" placeholder="Search &amp; enter"> -->
+						<!-- <a class="srh-btn">
+	                        <i class="fa fa-times"></i>
+	                    </a> -->
+						<button class="btn btn-success btn-xs my-2 my-sm-0  mr-sm-2" type="submit">
+							<i class="fa fa-search"></i></button>
+					</form>
+				</li>
+			</ul>
 
-  <ul class="navbar-nav ml-auto mr-0 mr-md-3 my-2 my-md-0">
-    <ul class="navbar-nav ml-auto ml-md-0 ">
-      <!-- <div class="nav-item">
-        <label class="font-weight-bold mr-sm-2" for="nit">todos</label>
-      </div> -->
-      <div class="nav-item">
-        <form id="form_searchEmail" method="POST" class="form-inline my-4 my-lg-0">
-          <!-- <input class="form-control mr-sm-2" type="search" placeholder="Buscar por Correo" aria-label="Search" id="correo" name="correo"> -->
-          <li class="nav-item dropdown mr-sm-1">
-          <select name="correo[]" id="correo" class="select2 form-control" title="buscar"></select>
-          </li>
-          <button class="btn btn-outline-success my-2 my-sm-0  mr-sm-2"  type="submit">
-            <i class="fa fa-search" ></i></button>
-        </form>
-      </div>
 
-      <li class="nav-item">
-        <a class="btn btn-secondary my-2 my-sm-0" href="#">
+			<ul class="navbar-nav my-lg-0">
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../../public/img/svg/upload-user.svg" alt="user" id="img_profile" class="img-circle" width="30"></a>
+					<div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
+						<span class="with-arrow"><span class="bg-primary"></span></span>
+						<div class="d-flex no-block align-items-center p-15 bg-primary text-white m-b-10">
+							<div class=""><img src="../../public/img/svg/upload-user.svg" alt="user" id="img_profile_herence" class="img-circle" width="60"></div>
+							<div class="m-l-10">
+								<h4 class="m-b-0"><?= $_SESSION['nombre_completo']; ?></h4>
+								<p class=" m-b-0">
+									<!-- <a href="mailto:mailto:example@example.org">correo</a> -->
+									<a class="eml-protected" href="#"></a>
+									<!-- <a class="eml-protected" href="#">9cf9e4fdf1ecf0f9dcf9e4fdf1ecf0f9b2f3eefb</a> -->
+							</div>
+						</div>
+						<a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> </a>
+						<a class="dropdown-item" href="javascript:void(0)"><i class="ti-wallet m-r-5 m-l-5"></i> </a>
+						<a class="dropdown-item" href="javascript:void(0)"><i class="ti-email m-r-5 m-l-5"></i> </a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="javascript:void(0)" id="viewAcount"><i class="ti-settings m-r-5 m-l-5"></i>Configuracion</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal"><i class="fa fa-power-off m-r-5 m-l-5"></i> Salir</a>
+						<div class="dropdown-divider"></div>
+						<div class="p-l-30 p-10"><a href="javascript:void(0)" class="btn btn-sm btn-success btn-rounded">Ver Perfil</a></div>
+					</div>
+				</li>
+				<!-- ============================================================== -->
+				<!-- User profile and search -->
+				<!-- ============================================================== -->
+				<li class="nav-item right-side-toggle"> <a class="nav-link  waves-effect waves-light" href="javascript:void(0)"><i class="ti-settings"></i></a></li>
 
-          <?= $_SESSION['Nombre_Completo']; ?>
-        </a>
-      </li>
-      <li class="nav-item dropdown no-arrow mx-1">
-        <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-bell fa-fw"></i>
-          <!-- <span class="badge badge-danger">9+</span> -->
-        </a>
-        <!-- <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div> -->
-      </li>
-      <li class="nav-item dropdown no-arrow mx-1">
-        <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="far fa-question-circle"></i>
-          <!-- <span class="badge badge-danger">7</span> -->
-        </a>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="messagesDropdown">
-          <a class="dropdown-item" href="#">THIS PROGRAM WAS DEVELOPED BY CRISTHIAN</a>
-        </div>
-      </li>
-      <li class="nav-item dropdown no-arrow">
-        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-user-circle fa-fw"></i>
-        </a>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-          <a class="dropdown-item" href="#" id="viewAcount">
-            <input type="hidden" name="userId" id="userId" value="<?= $_SESSION['correo_login']; ?>">
-           <i class="fas fa-cog">&nbsp;Configuracion</i></a>
-        <!--    <a class="dropdown-item" href="#">Activity Log</a>-->
-          <div class="dropdown-divider"></div> 
-          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Salir</a>
-        </div>
-      </li>
-    </ul>
 
-</nav>
-<script>
-$(document).ready(function () {
-  $("#correo").select2({width: "300px", theme: "classic"});
+			</ul>
+		</div>
 
-  $(function selectEmails() {
-    $.ajax({
-      url: "../../app/lib/ajax.php",
-      method: "post",
-      data: {
-        module: "Survey",
-        controller: "Survey",
-        nameFunction: "selectEmail"
-      },
-    }).done((res) => {
-      $("#correo").html(res);
-    });
-  });
 
-});
-</script>
+	</nav>
+	<script>
+		$(document).ready(function() {
+			//________________________IMAGEN USUARIO DE PERFIL_______________________________
+			$(function imageHerence() {
+				$("#img_profile").click(function() {
+					$("#img_profile_herence").attr("src", $("#img_profile").attr("src"));
+				});
+			});
+			$(function loadImageUser() {
+				$.ajax({
+					url: '../../app/lib/ajax.php',
+					method: "post",
+					dataType: "JSON",
+					// method: $(this).attr('method'),
+					data: {
+						module: "Session",
+						controller: "Session",
+						nameFunction: "loadImageUser",
+						userId: $("#userId").val()
+					},
+				}).done((res) => {
+					$("#img_profile").attr("src", "../../views/Admin/Files/" + res.address);
+				});
+			});
+			//_____________________________________________________________________________
+			//_________________BUSQUEDA INFORMACION DEL FORMULARIO PACIENTE________________|
+			$(".select2").select2({
+				width: "300px",
+				theme: "classic"
+
+			});
+			$(function selectEmails() {
+				$.ajax({
+					url: "../../app/lib/ajax.php",
+					method: "post",
+					data: {
+						module: "Survey",
+						controller: "Survey",
+						nameFunction: "selectEmail"
+					},
+				}).done((res) => {
+					$("#correo").html(res);
+				});
+			});
+			//_____________________________________________________________________________
+			//________________________NOTIFICACIONES REUNION_______________________________|
+
+			$(function notificationMeeting() {
+				$.ajax({
+					url: "../../app/lib/ajax.php",
+					method: "post",
+					data: {
+						module: "Meeting",
+						controller: "Meeting",
+						nameFunction: "notificationMeeting",
+						userId: $("#userId").val(),
+					},
+				}).done((res) => {
+					var content = JSON.parse(res);
+
+					if (content.notificaciones != "") {
+						$('#active_notify').show();
+
+						$("#notificaciones").text(content.cantNotificaciones);
+						$("#notifications_message .message-center").html(content.notificaciones);
+
+					} else {
+						$('#active_notify').hide();
+					}
+				});
+			});
+		});
+		//_________________________________________FIN______________________________________________
+	</script>
+	<!-- ============================================================== -->
+	<!-- Right sidebar -->
+	<!-- ============================================================== -->
+	<!-- .right-sidebar -->
+	<div class="right-sidebar">
+		<div class="slimscrollright">
+			<div class="rpanel-title"> Panel de Servicio <span><i class="ti-close right-side-toggle"></i></span> </div>
+			<div class="r-panel-body">
+				<ul id="themecolors" class="m-t-20">
+					<li><b>Con barra lateral Clara</b></li>
+					<li><a href="javascript:void(0)" data-skin="skin-default" class="default-theme">1</a></li>
+					<li><a href="javascript:void(0)" data-skin="skin-green" class="green-theme">2</a></li>
+					<li><a href="javascript:void(0)" data-skin="skin-red" class="red-theme">3</a></li>
+					<li><a href="javascript:void(0)" data-skin="skin-blue" class="blue-theme">4</a></li>
+					<li><a href="javascript:void(0)" data-skin="skin-purple" class="purple-theme">5</a></li>
+					<li><a href="javascript:void(0)" data-skin="skin-megna" class="megna-theme">6</a></li>
+					<li class="d-block m-t-30"><b>Con barra lateral Oscura</b></li>
+					<li><a href="javascript:void(0)" data-skin="skin-default-dark" class="default-dark-theme working">7</a></li>
+					<li><a href="javascript:void(0)" data-skin="skin-green-dark" class="green-dark-theme">8</a></li>
+					<li><a href="javascript:void(0)" data-skin="skin-red-dark" class="red-dark-theme">9</a></li>
+					<li><a href="javascript:void(0)" data-skin="skin-blue-dark" class="blue-dark-theme">10</a></li>
+					<li><a href="javascript:void(0)" data-skin="skin-purple-dark" class="purple-dark-theme">11</a></li>
+					<li><a href="javascript:void(0)" data-skin="skin-megna-dark" class="megna-dark-theme ">12</a></li>
+				</ul>
+				<!-- <ul class="m-t-20 chatonline">
+                                <li><b>Chat option</b></li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../../public/img/svg/upload-user.svg" alt="user-img" class="img-circle"> <span>Varun Dhavan <small class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../assets/images/users/2.jpg" alt="user-img" class="img-circle"> <span>Genelia Deshmukh <small class="text-warning">Away</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../assets/images/users/3.jpg" alt="user-img" class="img-circle"> <span>Ritesh Deshmukh <small class="text-danger">Busy</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../assets/images/users/4.jpg" alt="user-img" class="img-circle"> <span>Arijit Sinh <small class="text-muted">Offline</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../assets/images/users/5.jpg" alt="user-img" class="img-circle"> <span>Govinda Star <small class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../assets/images/users/6.jpg" alt="user-img" class="img-circle"> <span>John Abraham<small class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../assets/images/users/7.jpg" alt="user-img" class="img-circle"> <span>Hritik Roshan<small class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../assets/images/users/8.jpg" alt="user-img" class="img-circle"> <span>Pwandeep rajan <small class="text-success">online</small></span></a>
+                                </li>
+                            </ul> -->
+			</div>
+		</div>
+	</div>
+	<!-- ============================================================== -->
+	<!-- End Right sidebar -->
+	<!-- ============================================================== -->

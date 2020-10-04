@@ -1,7 +1,0 @@
-Rutas...
-copiar y pegar las rutas de las carpetas, en el orden que estan pegadas.
-
-StaticPage\views\Session\Session.html
-StaticPage\views\Session\Register.html
-StaticPage\views\Session\forgot-password
-StaticPage\web\pages\index.html

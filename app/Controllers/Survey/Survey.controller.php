@@ -33,14 +33,14 @@ class Survey extends connection
         // var_dump($_POST);
         // echo $correo;
         if ($correo != "") {
-            $sql = "SELECT preguntas.id_pregunta, texto_pregunta, respuesta, CONCAT(nombres, ' ', apellidos) AS Nombre_Completo FROM preguntas, respuestas_preguntas, usuario
+            $sql = "SELECT preguntas.id_pregunta, texto_pregunta, respuesta, CONCAT(nombres, ' ', apellidos) AS nombre_completo FROM preguntas, respuestas_preguntas, usuario
             WHERE preguntas.id_pregunta = respuestas_preguntas.id_pregunta AND usuario.correo = respuestas_preguntas.correo
             AND usuario.correo = '$correo'";
             $searchEmail = $this->execute($sql);
 
             foreach ($searchEmail as $list) {
-                if ($list["Nombre_Completo"]!="") 
-                    $name["Nombre_Completo"] = $list["Nombre_Completo"];
+                if ($list["nombre_completo"]!="") 
+                    $name["nombre_completo"] = $list["nombre_completo"];
                     break;
                 
             }

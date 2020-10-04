@@ -13,9 +13,12 @@
 <!-- Select2 Language -->
 <script src="../../vendor/select2/language/es.min.js"></script>
 <!-- Datepicker Jquery-UI JS -->
-<script src="../../vendor/datepicker/js/datepicker.min.js"></script>
+<script src="../../vendor/moment/moment-with-locales.min.js"></script>
+
+<script src="../../vendor/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+<!-- <script src="../../vendor/datepicker/js/datepicker.min.js"></script> -->
 <!-- Datepicker Jquery-UI Language -->
-<script src="../../vendor/datepicker/language/datepickerSpanish.js"></script>
+<!-- <script src="../../vendor/datepicker/language/datepickerSpanish.js"></script> -->
 <!-- Sweet Alert -->
 <script src="../../vendor/sweetalert/js/sweetalert2.min.js"></script>
 
@@ -23,16 +26,19 @@
 <script src="../../vendor/jquery-validate/js/jquery.validate.min.js"></script>
 <script src="../../vendor/jquery-validate/language/messages_es.min.js"></script>
 
-<!-- Typehead JS -> a flexible JavaScript library that provides a strong foundation for building robust typeaheads -->
-<script src="../../vendor/typeahead/typeahead.min.js"></script>
 
 <!-- Bootstrap -->
 <!--  responsive -->
 <script src="../../vendor/bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
 <!--  //responsive -->
+ 
+    <script src="../../vendor/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <!-- Date range Plugin JavaScript -->
+    <script src="../../vendor/timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="../../vendor/daterangepicker/daterangepicker.js"></script>
 
-<!-- Image Map Resize Js -> This is a simple library that makes HTML Image Maps responsive. -->
-<script src="../../vendor/image-map-resize/imageMapResizer.min.js"></script>
+ 
+
 
 <!-- Lodash Js -> A modern JavaScript utility library delivering modularity, performance & extras. -->
 <script src="../../vendor/lodash/js/lodash.min.js"></script>
@@ -41,15 +47,45 @@
 <script src="../../vendor/cleave/cleave.min.js"></script>
 <script src="../../vendor/select2/js/select2.min.js"></script>
 
+<!-- Typehead JS -> a flexible JavaScript library that provides a strong foundation for building robust typeaheads -->
+<!-- <script src="../../vendor/typeahead/typeahead.min.js"></script> -->
 <!-- Higcharts Js -> Highcharts makes it easy for developers to set up interactive charts in their web pages. -->
-<script src="../../vendor/higcharts/code/highstock.js"></script>
+<!-- <script src="../../vendor/higcharts/code/highstock.js"></script>
 <script src="../../vendor/higcharts/code/highcharts-3d.js"></script>
 <script src="../../vendor/higcharts/code/modules/exporting.js"></script>
-<script src="../../vendor/higcharts/code/modules/offline-exporting.js"></script>
+<script src="../../vendor/higcharts/code/modules/offline-exporting.js"></script> -->
 
  <!-- Alertify JS -->
 <script src="../../vendor/alertify/js/alertify.min.js?v=<?=rand();?>"></script>
 
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="../../assets/template/dist/js/perfect-scrollbar.jquery.min.js"></script>
+    <!--Wave Effects -->
+    <script src="../../assets/template/dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="../../assets/template/dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="../../assets/template/dist/js/custom.min.js"></script>
+    <!-- ============================================================== -->
+    <!-- This page plugins -->
+    <!-- ============================================================== -->
+   
+    <!--c3 JavaScript -->
+    <script src="../../vendor/d3/d3.min.js"></script>
+    <script src="../../vendor/c3-master/c3.min.js"></script>
+ 
+    <!-- Popup message jquery -->
+    <script src="../../vendor/toast-master/js/jquery.toast.js"></script>
+    <!-- <script src="../../assets/template/dist/js/dashboard1.js"></script> -->
+
+
+
+             <!--morris JavaScript -->
+            <!-- <script src="../../vendor/raphael/raphael-min.js"></script>
+            <script src="../../vendor/morrisjs/morris.min.js"></script>
+            <script src="../../vendor/jquery-sparkline/jquery.sparkline.min.js"></script> -->
+            <!-- Chart JS -->
+            <!-- <script src="../../assets/template/dist/js/dashboard1.js"></script> -->
             <!-- Page level plugin JavaScript-->
             <!-- <script src="vendor/chart.js/Chart.min.js"></script> -->
 
@@ -62,20 +98,14 @@
             <!--stickey kit -->
             <!-- <script src="../../vendor/sticky-kit-master/dist/sticky-kit.min.js"></script> -->
 
-            <!-- Select2 JS -->
-            <!-- <script src="../../vendor/select2/js/select2.full.min.js"></script> -->
-            <!-- Select2 Language -->
-            <!-- <script src="../../vendor/select2/language/es.min.js"></script> -->
+            <!-- Image Map Resize Js -> This is a simple library that makes HTML Image Maps responsive. -->
+            <!-- <script src="../../vendor/image-map-resize/imageMapResizer.min.js"></script> -->
+<!-- Date Picker Plugin JavaScript -->
 
-            <!-- slimscrollbar scrollbar JavaScript -->
-            <!-- <script src="../../template/dist/js/perfect-scrollbar.jquery.min.js"></script> -->
-            <!--Wave Effects -->
-            <!-- <script src="../../template/dist/js/waves.js"></script> -->
-            <!--Menu sidebar -->
-            <!-- <script src="../../template/dist/js/sidebarmenu.js"></script> -->
+<script src="../../encode-decode-email.js"></script>
 
 <!-- Banner-Slider-JavaScript -->
-<script src="../../vendor/styles-js/js/responsiveslides.min.js"></script>
+<script src="../../assets/template/my-css-js/js/responsiveslides.min.js"></script>
 <script>
     $(function() {
         $("#slider").responsiveSlides({
@@ -90,7 +120,7 @@
 <!-- //Banner-Slider-JavaScript -->
 
 <!-- Owl-Carousel-JavaScript -->
-<script src="../../vendor/styles-js/js/owl.carousel.js"></script>
+<script src="../../assets/template/my-css-js/js/owl.carousel.js"></script>
 <script>
     $(document).ready(function() {
         $("#owl-demo").owlCarousel({
@@ -104,15 +134,15 @@
 <!-- //Owl-Carousel-JavaScript -->
 
 <!-- Progressive-Effects-Animation-JavaScript -->
-<script type="text/javascript" src="../../vendor/styles-js/js/jquery.inview.min.js"></script>
-<script type="text/javascript" src="../../vendor/styles-js/js/wow.min.js"></script>
-<script type="text/javascript" src="../../vendor/styles-js/js/mousescroll.js"></script>
-<script type="text/javascript" src="../../vendor/styles-js/js/main.js"></script>
-<script type="text/javascript" src="../../vendor/styles-js/js/numscroller-1.0.js"></script>
+<script type="text/javascript" src="../../assets/template/my-css-js/js/jquery.inview.min.js"></script>
+<script type="text/javascript" src="../../assets/template/my-css-js/js/wow.min.js"></script>
+<script type="text/javascript" src="../../assets/template/my-css-js/js/mousescroll.js"></script>
+<script type="text/javascript" src="../../assets/template/my-css-js/js/main.js"></script>
+<script type="text/javascript" src="../../assets/template/my-css-js/js/numscroller-1.0.js"></script>
 <!-- //Progressive-Effects-Animation-JavaScript -->
 
 <!-- Magnific-Popup-Display-JavaScript -->
-<script src="../../vendor/styles-js/js/jquery.magnific-popup.js" type="text/javascript"></script>
+<script src="../../assets/template/my-css-js/js/jquery.magnific-popup.js" type="text/javascript"></script>
 <script>
     $(document).ready(function() {
         $('.popup-with-zoom-anim').magnificPopup({
@@ -138,9 +168,6 @@
             scrollSpeed: 100,
             easingType: 'linear'
         };
-        //   $().UItoTop({
-        //     easingType: 'easeOutQuart'
-        //   });
     });
 </script>
 <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 0;"> </span></a>

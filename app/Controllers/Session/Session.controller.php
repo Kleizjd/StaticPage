@@ -4,6 +4,7 @@
 // use function PHPSTORM_META\type;
 
 @session_start();
+include_once "../Controllers/Utilities/Utilities.controller.php";
 include_once "../../config/connection.php";
 
 class Session extends connection {
@@ -12,7 +13,7 @@ class Session extends connection {
     public function createSession(){
         extract($_POST);
         $answer = array();
-        $sqlUser = "SELECT id_rol, correo, contrasena, CONCAT(nombres, ' ', apellidos) AS Nombre_Completo FROM usuario WHERE correo = '$user' ";
+        $sqlUser = "SELECT id_rol, correo, contrasena, CONCAT(nombres, ' ', apellidos) AS nombre_completo FROM usuario WHERE correo = '$user' ";
         $sql = $this->execute($sqlUser);
         
             if(mysqli_num_rows($sql) != 0){
@@ -21,7 +22,7 @@ class Session extends connection {
               
                 if (password_verify($password, $passwordDB)) {
 
-                    $_SESSION['Nombre_Completo'] = str_replace("*", "", $row['Nombre_Completo']);
+                    $_SESSION['nombre_completo'] = str_replace("*", "", $row['nombre_completo']);
                     $_SESSION['rol_usuario'] = $row['id_rol'];
                     $_SESSION['correo_login'] = $row['correo'];
                     $answer['typeAnswer'] = true;
@@ -40,10 +41,9 @@ class Session extends connection {
        $answer = array();
        
        if($password == $passwordVerify){
-           //Encriptar-----------------------------------------------------------------------
-            $bytes = random_bytes(22); $options = [ 'cost' => 10,  'salt' => bin2hex($bytes) ];
-            $passEncrypt = password_hash($password, PASSWORD_BCRYPT, $options);
-            //-------------------------------------------------------------------------------
+          
+            $utilities = new Utilities();$passEncrypt = $utilities->encriptPassword($password,10,22);//password encripted
+            
 
             $sqlRegister ="INSERT INTO usuario (id_persona,correo, contrasena, id_rol, nombres, apellidos) VALUES ( null,'$inputEmail', '$passEncrypt' ,  2, '$firstName', '$lastName' )";
             $sql = $this->execute($sqlRegister);
@@ -89,6 +89,22 @@ class Session extends connection {
         // echo json_encode($answer);
         
      }
+    public function loadImageUser() {
+        extract($_POST);
+        $answer = array();
+        
+        $ruta = "../../views/Admin/Files/";
+        $sqlUser = "SELECT imagen_usuario FROM usuario WHERE correo = '$userId' ";
+        $User = $this->execute($sqlUser);
+        $row = $User->fetch_assoc();
+        // $answer['imagen_usuario'] = $ruta." ".$row['imagen_usuario'];
+        $answer["address"] = $row['imagen_usuario'];
+        // $answer = $row['imagen_usuario'];
+        // $answer = "../../views/Admin/Files/".$row['imagen_usuario'];
+        // var_dump($answer);
+        // echo $User;
+        echo json_encode($answer);
+    }
     public function closeSession() {
         @session_unset();
         @session_destroy();

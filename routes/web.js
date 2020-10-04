@@ -23,5 +23,12 @@ $(document).ready(function () {
 			callView("Admin", "Admin", "viewAcount", userId);	
 		});
 	});
+  //======================[  Meeting  ]=========================//	
+	$(function viewAcount() {
+		$(document).on("click", "#viewCreateMeeting", function () {
+      // alert('ehr')
+			callView("Meeting", "Meeting", "viewCreateMeeting");	
+		});
+	});
 
 });

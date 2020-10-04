@@ -3,13 +3,13 @@
 <!-- Supportive-JavaScript -->
 <script src="vendor/sweetalert/js/sweetalert2.min.js"></script>
 <!-- Banner-Slider-JavaScript -->
-<script src="vendor/styles-js/js/responsiveslides.min.js"></script>
+<script src="assets/template/my-css-js/js/responsiveslides.min.js"></script>
 <!--  responsive -->
 <script src="vendor/bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
 <!--  //responsive -->
 
 <!-- Owl Carousel -->
-<script src="vendor/styles-js/js/owl.carousel.js"></script>
+<script src="assets/template/my-css-js/js/owl.carousel.js"></script>
 <!-- //Owl Carousel -->
         <!-- Slide-To-Top JavaScript (No-Need-To-Change) -->
         <script type="text/javascript">
@@ -28,7 +28,7 @@
         <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 0;"> </span></a>
         <!-- //Slide-To-Top JavaScript -->
         <!-- Owl-Carousel-JavaScript -->
-        <script src="vendor/styles-js/js/owl.carousel.js"></script>
+        <script src="assets/template/my-css-js/js/owl.carousel.js"></script>
         <script>
             $(document).ready(function() {
                 $("#owl-demo").owlCarousel({
@@ -40,7 +40,7 @@
             });
         </script>
         <!-- //Owl-Carousel-JavaScript -->
-        <script src="vendor/styles-js/js/jquery.magnific-popup.js" type="text/javascript"></script>
+        <script src="assets/template/my-css-js/js/jquery.magnific-popup.js" type="text/javascript"></script>
 	<script>
 	$(document).ready(function() {
 		$('.popup-with-zoom-anim').magnificPopup({

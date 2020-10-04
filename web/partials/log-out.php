@@ -10,7 +10,7 @@
             <div class="modal-body">Presione "Salir" a continuación si está listo para finalizar su sesión.</div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" id="exit">Salir</a>
+                <a class="btn btn-primary text-light" id="exit">Salir</a>
             </div>
         </div>
     </div>
@@ -30,15 +30,16 @@
                 },
             }).done(() => {
                 $('#logoutModal').modal().hide();
-
+                window.location = "../../";
             // setTimeout(function() {
-                swal({
-                    title: "Salida exitosa!",
-                    type: "success",
-                })
-                .then(function() {
-                    window.location = "../../";
-                });
+                // swal({
+                //     title: "Salida exitosa!",
+                //     type: "success",
+                //     // type: "error",
+                // })
+                // .then(function() {
+                //     window.location = "../../";
+                // });
             // }, 1000);
             });
         });

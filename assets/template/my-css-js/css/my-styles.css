@@ -1,0 +1,230 @@
+ 
+    /* #mision {
+        background: #d181f3;
+    }
+
+    #vision {
+        background: #e3b8fe;
+
+    }
+
+    #historia {
+        background: #d181f3;
+
+    }
+
+    #targeta {
+        background: #e3b8fe;
+
+    }
+
+    #tit_ingre {
+
+        background: #d181f3;
+    }
+
+    #agregar {
+        background: #d181f3;
+        border-bottom: black;
+        font-style: black;
+    } */
+
+    /* * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+      } */
+
+
+      /*************
+       CHANGE IMAGE |
+      **************/
+      .img__img{
+        opacity: 0.5;
+      }
+      
+      /* relevant styles */
+      .img__wrap {
+        position: relative;
+        /* height: 200px;
+        width: 257px; */
+      }
+      .img__description {
+
+        font-size: large;
+        font-weight: bold;
+        position: absolute;
+        top: 60px;
+        color: rgb(0, 0, 0);
+        visibility: hidden;
+        opacity: 0;
+        /* transition effect. not necessary */
+        transition: opacity .2s, visibility .2s;
+      }
+      
+      .img__wrap:hover .img__description {
+        visibility: visible;
+        opacity: 2;
+      }
+      .shadow-hover-efect{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(204, 205, 206, 0.72);
+        /* color: rgb(0, 0, 0); */
+        color: #000000;
+        visibility: hidden;
+        opacity: 0;
+      
+        /* transition effect. not necessary */
+        transition: opacity .2s, visibility .2s;
+      }
+      .img__wrap:hover .shadow-hover-efect {
+        visibility: visible;
+        opacity: 2;
+      }
+
+      .img-circle {
+        border-radius: 100%;
+      }
+
+
+      /* CREATE BY JOSE DANIEL GRIJALBA OSORIO */
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(10deg);
+  }
+
+  30% {
+    transform: rotate(0deg);
+  }
+
+  40% {
+    transform: rotate(-10deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  60% {
+    transform: rotate(5deg);
+  }
+
+  70% {
+    transform: rotate(0deg);
+  }
+
+  80% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes sonar {
+  0% {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+/* .movement */
+.sidebar-nav .sidebar-menu ul li a:hover>i::before {
+  display: inline-block;
+  animation: swing ease-in-out 0.5s 1 alternate;
+}
+
+     /*--------------------sidebar-header----------------------*/
+
+  .sidebar-nav .sidebar-header {
+    padding: 20px;
+    overflow: hidden;
+  }
+
+  .sidebar-nav .sidebar-header .user-pic {
+    float: left;
+    /* width: 60px; */
+    padding: 2px;
+    border-radius: 12px;
+    margin-right: 15px;
+    overflow: hidden;
+  }
+
+  .sidebar-nav .sidebar-header .user-pic img {
+    object-fit: cover;
+    height: 25%;
+    width: 100%;
+  }
+
+  .sidebar-nav .sidebar-header .user-info {
+    float: left;
+  }
+
+  .sidebar-nav .sidebar-header .user-info>span {
+    display: block;
+  }
+
+  .sidebar-nav .sidebar-header .user-info .user-role {
+    font-size: 12px;
+  }
+
+  .sidebar-nav .sidebar-header .user-info .user-status {
+    font-size: 11px;
+    margin-top: 4px;
+  }
+
+  .sidebar-nav .sidebar-header .user-info .user-status i {
+    font-size: 8px;
+    margin-right: 4px;
+    color: #5cb85c;
+  }
+
+  /*-----------------------------chiller-theme-------------------------------------------------*/
+
+  .chiller-theme .sidebar-nav {
+    background: #31353D;
+  }
+
+  .chiller-theme .sidebar-nav .sidebar-header,
+  .chiller-theme .sidebar-nav .sidebar-search,
+  .chiller-theme .sidebar-nav .sidebar-menu {
+    border-top: 1px solid #3a3f48;
+  }
+
+  .chiller-theme .sidebar-nav .sidebar-search input.search-menu,
+  .chiller-theme .sidebar-nav .sidebar-search .input-group-text {
+    border-color: transparent;
+    box-shadow: none;
+  }
+
+  .chiller-theme .sidebar-nav .sidebar-header .user-info .user-role,
+  .chiller-theme .sidebar-nav .sidebar-header .user-info .user-status,
+  .chiller-theme .sidebar-nav .sidebar-search input.search-menu,
+  .chiller-theme .sidebar-nav .sidebar-search .input-group-text,
+  .chiller-theme .sidebar-nav .sidebar-brand>a,
+  .chiller-theme .sidebar-nav .sidebar-menu ul li a,
+  .chiller-theme .sidebar-footer>a {
+    color: #818896;
+  }
+
+  .chiller-theme .sidebar-nav .sidebar-menu ul li:hover>a,
+  .chiller-theme .sidebar-nav .sidebar-menu .sidebar-dropdown.active>a,
+  .chiller-theme .sidebar-nav .sidebar-header .user-info,
+  .chiller-theme .sidebar-nav .sidebar-brand>a:hover,
+  .chiller-theme .sidebar-footer>a:hover i {
+    color: #b8bfce;
+  }
+/* FIN JOSE DANIEL GRIJALBA OSORIO */

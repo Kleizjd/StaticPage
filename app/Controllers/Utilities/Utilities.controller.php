@@ -80,5 +80,12 @@ class Utilities extends connection {
 
         echo json_encode($answer);
     }
+    function encriptPassword($password, $cost, $salt){
+        //Encriptar-----------------------------------------------------------------------
+        $bytes = random_bytes($salt); $options = [ 'cost' => $cost,  'salt' => bin2hex($bytes) ];
+        $passEncrypt = password_hash($password, PASSWORD_BCRYPT, $options);
+        //-------------------------------------------------------------------------------
+        return $passEncrypt;
+    }
 
 }
