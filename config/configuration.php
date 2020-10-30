@@ -2,4 +2,4 @@
  $server = "localhost";
  $user = "root";
  $password = "";
- $database = "psicoapp/web";
+ $database = "psicoapp";

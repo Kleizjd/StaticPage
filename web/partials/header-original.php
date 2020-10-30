@@ -149,21 +149,21 @@
 				});
 			});
 
-			$(function notificationMeeting() {
+			// $(function notificationMeeting() {
 
-				$.ajax({
-					url: "../../app/lib/ajax.php",
-					method: "post",
-					data: {
-						module: "Meeting",
-						controller: "Meeting",
-						nameFunction: "notificationMeeting",
-						userId: $("#userId").val(),
-					},
-				}).done((res) => {
-					// $("#correo").html(res);
-				});
-			});
+			// 	$.ajax({
+			// 		url: "../../app/lib/ajax.php",
+			// 		method: "post",
+			// 		data: {
+			// 			module: "Meeting",
+			// 			controller: "Meeting",
+			// 			nameFunction: "notificationMeeting",
+			// 			userId: $("#userId").val(),
+			// 		},
+			// 	}).done((res) => {
+			// 		// $("#correo").html(res);
+			// 	});
+			// });
 			$(function loadImageUser() {
 				$.ajax({
 					url: '../../app/lib/ajax.php',

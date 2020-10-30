@@ -29,6 +29,12 @@ $(document).ready(function () {
       // alert('ehr')
 			callView("Meeting", "Meeting", "viewCreateMeeting");	
 		});
+  });
+   //======================[  Desprendible  ]=========================//	
+	$(function viewAcount() {
+		$(document).on("click", "#viewDesprendible", function () {
+			callView("Desprendible", "Desprendible", "viewDesprendible", userId);	
+		});
 	});
 
 });

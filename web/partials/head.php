@@ -26,11 +26,15 @@
 <!-- Sweet alert 2 CSS -->
 <link href="../../vendor/sweetalert/css/sweetalert2.min.css?v=<?= rand(); ?>" rel="stylesheet">
 <!-- Datepicker Jquery-UI CSS -->
-<link href="../../vendor/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet">
+<!--------------------------------CALENDAR [DATE-TIME-PICKER]------------------------------------------------>
+<link href="../../vendor/DateTimePicker/css/materialDateTimePicker.css" rel="stylesheet" /> 
+<link href='../../vendor/DateTimePicker/css/addfonts.css' rel='stylesheet' type='text/css'>
+<!------------------------------------------------------------------------------------------->
+<!-- <link href="../../vendor/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet"> -->
     <!-- Daterange picker plugins css -->
-    <link href="../../vendor/timepicker/bootstrap-timepicker.min.css" rel="stylesheet">
-    <link href="../../vendor/daterangepicker/daterangepicker.css" rel="stylesheet">
-<!-- <link href="../../vendor/datepicker/css/datepicker.min.css?v=<?=rand(); ?>" rel="stylesheet"> -->
+    <!-- <link href="../../vendor/timepicker/bootstrap-timepicker.min.css" rel="stylesheet">
+    <link href="../../vendor/daterangepicker/daterangepicker.css" rel="stylesheet"> -->
+    <!-- <link href="../../vendor/datepicker/css/datepicker.min.css?v=<?=rand(); ?>" rel="stylesheet"> -->
 <!-- Select2 CSS -->
 <link href="../../vendor/select2/css/select2.min.css?v=<?= rand(); ?>" rel="stylesheet">
 

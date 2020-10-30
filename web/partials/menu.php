@@ -51,6 +51,12 @@
 							<span class="hide-menu">Configuracion</span>
 						</a>
 					</li>
+					<li>
+						<a class="waves-effect waves-dark" id="viewDesprendible" aria-expanded="false">
+							<i class="ti-pencil-alt"></i>
+							<span class="hide-menu">Desprendible</span>
+						</a>
+					</li>
 					<li><a id="viewCreateMeeting">Reunion<i class="ti-calendar"></i></a></li>
 
 					<li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-layout-grid2"></i><span class="hide-menu">Apps</span></a>

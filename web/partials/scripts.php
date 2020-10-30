@@ -15,7 +15,7 @@
 <!-- Datepicker Jquery-UI JS -->
 <script src="../../vendor/moment/moment-with-locales.min.js"></script>
 
-<script src="../../vendor/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+<!-- <script src="../../vendor/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script> -->
 <!-- <script src="../../vendor/datepicker/js/datepicker.min.js"></script> -->
 <!-- Datepicker Jquery-UI Language -->
 <!-- <script src="../../vendor/datepicker/language/datepickerSpanish.js"></script> -->
@@ -32,10 +32,11 @@
 <script src="../../vendor/bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
 <!--  //responsive -->
  
-    <script src="../../vendor/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <script src="../../vendor/DateTimePicker/js/materialDateTimePicker.js"></script>
+    <!-- <script src="../../vendor/bootstrap-datepicker/bootstrap-datepicker.min.js"></script> -->
     <!-- Date range Plugin JavaScript -->
-    <script src="../../vendor/timepicker/bootstrap-timepicker.min.js"></script>
-    <script src="../../vendor/daterangepicker/daterangepicker.js"></script>
+    <!-- <script src="../../vendor/timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="../../vendor/daterangepicker/daterangepicker.js"></script> -->
 
  
 

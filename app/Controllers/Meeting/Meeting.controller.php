@@ -20,7 +20,7 @@ class Meeting extends connection
         extract($_POST);
         $answer = false;
 
-        $sql = "INSERT INTO reunion (fecha, titulo, descripcion) VALUES ('$fecha_reunion', '$titulo_reunion', '$descripcion')";
+        $sql = "INSERT INTO reunion (fecha_reunion, titulo, descripcion) VALUES ('$fecha_reunion', '$titulo_reunion', '$descripcion')";
 
         $sqlMeeting = $this->execute($sql);
 
@@ -37,9 +37,9 @@ class Meeting extends connection
     public function notificationMeeting()
     {
 
-        $sqlMeeting = "SELECT titulo, descripcion, fecha FROM reunion WHERE (DATEDIFF(fecha,NOW())) <= '4' ";
+        $sqlMeeting = "SELECT titulo, descripcion, fecha_reunion FROM reunion WHERE (DATEDIFF(fecha_reunion,NOW())) <= '4' ";
         $sql = $this->execute($sqlMeeting);
-        $sqlNotificaciones = "SELECT count(*) as notificaciones FROM reunion WHERE (DATEDIFF(fecha,NOW())) <= '4'";
+        $sqlNotificaciones = "SELECT count(*) as notificaciones FROM reunion WHERE (DATEDIFF(fecha_reunion,NOW())) <= '4'";
         $sqlNoti = $this->execute($sqlNotificaciones);
         $row = $sqlNoti->fetch_assoc();
         $numero = $row['notificaciones'];
@@ -53,7 +53,7 @@ class Meeting extends connection
                 $notificacion .= "      <a href='javascript:void(0)'>
                                             <div class='btn btn-danger btn-circle'><i class='ti-calendar'></i></div>
                                                 <div class='mail-contnet'>";
-                $notificacion .= "             <h5>" . $reunion['titulo'] . "</h5> <span class='mail-desc'>" . $reunion['descripcion'] . "</span> <span class='time'>".$reunion['fecha']."</span>";
+                $notificacion .= "             <h5>" . $reunion['titulo'] . "</h5> <span class='mail-desc'>" . $reunion['descripcion'] . "</span> <span class='time'>".$reunion['fecha_reunion']."</span>";
                 $notificacion .= "          </div>
                                         </a>";
             }
